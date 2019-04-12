@@ -1,0 +1,166 @@
+.container {
+    background: url(../images/fshx/jghxbg.png);
+    background-size: 100% 100%;
+
+    position: relative;
+    overflow: hidden;
+
+    height: 100vh;
+    width: 100vw;
+
+    padding: 0;
+    margin: 0;
+
+}
+
+.content {
+    border: 1px solid #000;
+    height: 91vh;
+
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+/* 底部導行列 */
+.mainNav {
+    position: fixed;
+    bottom: 0;
+    z-index: 1;
+}
+
+.mainNavUl {
+    background: url(../images/bottomChoice.png);
+
+    height: 9vh;
+
+    /* 為了讓水平/垂直置中起作用 */
+    display: flex;
+
+    /* 內容垂直置中 */
+    -webkit-align-items: center;
+    align-items: center;
+
+    /* 內容水平置中 */
+    -webkit-justify-content: center;
+    justify-content: center;
+
+    margin: 0;
+}
+
+.mainNavUl li {
+    padding: 2vw;
+    -webkit-flex: 1;
+    flex: 1;
+
+    /* 為了讓水平/垂直置中起作用 */
+    display: flex;
+
+    /* 內容垂直置中 */
+    -webkit-align-items: center;
+    align-items: center;
+
+    /* 內容水平置中 */
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+.mainNavUl li a img {
+    margin: auto;
+
+    width: 95%;
+    /* width: 25vw;
+    height: 10vh; */
+}
+
+
+
+
+
+
+/* 標題圖案 */
+.header {
+    border: 1px solid #000;
+    height: 14vh;
+
+    /* 以此為基準點 */
+    position: relative;
+    overflow: hidden;
+}
+
+.header img {
+    /* 定義大小 */
+    height: 100%;
+
+    /* 定義邊距 */
+    padding: 2vh 4vw;
+}
+
+
+
+.showRoom {
+    border: 1px solid blue;
+
+    height: 40vh;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.showRoom .combine {
+    border: 1px solid #000;
+    position: absolute;
+    bottom: 0;
+
+    height: 5vh;
+    width: 100%;
+
+    display: flex;
+    /* 內容垂直置中 */
+    -webkit-align-items: center;
+    align-items: center;
+    /* 內容水平平靠右對齊 */
+    -webkit-justify-content: flex-end;
+    justify-content: flex-end;
+}
+
+.showRoom .combine img {
+    height: 70%;
+    margin-right: 2vw;
+}
+
+
+
+.map {
+    border: 1px solid red;
+    /* 決定此區塊位置 */
+    z-index: 1;
+    top: 54vh;
+
+    /* 決定此區塊大小 */
+    height: 18vh;
+
+    position: absolute;
+    overflow: hidden;
+
+    display: flex;
+    /* 內容垂直置中 */
+    -webkit-align-items: center;
+    align-items: center;
+    /* 內容水平置中 */
+    -webkit-justify-content: left;
+    justify-content: left;
+
+}
+
+.map img {
+    height: 90%;
+}
+
+
+
+.options {
+    border: 1px solid green;
+    height: 27vh;
+}

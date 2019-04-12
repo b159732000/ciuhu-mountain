@@ -1,0 +1,64 @@
+.container {
+    position: relative;
+    overflow: hidden;
+
+    height: 100vh;
+    width: 100vw;
+
+    padding: 0;
+    margin: 0;
+
+}
+
+
+
+/* 底部導行列 */
+.mainNav {
+    position: fixed;
+    bottom: 0;
+    z-index: 1;
+}
+
+.mainNavUl {
+    background: url(../images/bottomChoice.png);
+
+    height: 9vh;
+
+    /* 為了讓水平/垂直置中起作用 */
+    display: flex;
+
+    /* 內容垂直置中 */
+    -webkit-align-items: center;
+    align-items: center;
+
+    /* 內容水平置中 */
+    -webkit-justify-content: center;
+    justify-content: center;
+
+    margin: 0;
+}
+
+.mainNavUl li {
+    padding: 2vw;
+    -webkit-flex: 1;
+    flex: 1;
+
+    /* 為了讓水平/垂直置中起作用 */
+    display: flex;
+
+    /* 內容垂直置中 */
+    -webkit-align-items: center;
+    align-items: center;
+
+    /* 內容水平置中 */
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+.mainNavUl li a img {
+    margin: auto;
+
+    width: 95%;
+    /* width: 25vw;
+    height: 10vh; */
+}
