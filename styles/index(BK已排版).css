@@ -1,0 +1,30 @@
+body {
+    /* height: 100%; */
+    
+    /* background: url(../images/indexBg.png);
+    background-repeat: no-repeat;
+    background-size: 76% 180%; */
+}
+
+.choiceContent .topChoice {
+    text-align: center;
+    margin: 3em 4em 5em;
+}
+
+.choiceContent .topChoice .choiceList {
+    width: 13em;
+    /* position: absolute; */
+    /* margin: 0px auto; */
+}
+
+.choiceList li {
+    display: inline-block;
+}
+
+.choiceContent li img{
+    width: 5em;
+}
+
+.choiceContent li:nth-child(1) li {
+    margin-right: 3em;
+}

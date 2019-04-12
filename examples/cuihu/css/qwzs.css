@@ -1,0 +1,398 @@
+@keyframes big{
+    0%{transform: scale(.1,.1);opacity: 0}
+    100%{transform: scale(1,1);opacity: 1}
+}
+@keyframes left{
+    0%{transform:translateX(50vw);opacity: 0}
+    100%{transform: translateX(0);opacity: 1}
+}
+@keyframes roll{
+    0%{transform: rotate(0deg)}
+    100%{transform: rotate(360deg)}
+}
+@keyframes ss{
+    0{opacity: 1}
+    50%{opacity:0}
+    100%{opacity: 1}
+}
+
+.sdwq{
+    width: 100%;
+    height: 100%;
+    background: url("../img/qwzs/sdwqBg.png") no-repeat center;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+.sdwq .icon1{
+     position: absolute;
+     top: 37vh;
+     left: 18vw;
+     width: 30vw;
+     height: 7vw;
+     background: url("../img/qwzs/icon1.png") no-repeat center;
+     -webkit-background-size: 100% 100%;
+     background-size: 100% 100%;
+    animation: big 1.2s;
+ }
+.sdwq .icon2{
+    position: absolute;
+    top: 41vh;
+    left: 36vw;
+    width: 30vw;
+    height: 6vw;
+    background: url("../img/qwzs/icon2.png") no-repeat center;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    animation: big 1.8s;
+}
+.sdwq .icon3{
+    position: absolute;
+    top: 35vh;
+    left: 79vw;
+    width: 27vw;
+    height: 6vw;
+    background: url("../img/qwzs/icon3.png") no-repeat center;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    animation: big 1.4s;
+}
+.sdwq .icon4{
+     position: absolute;
+    top: 42vh;
+    left: 5vw;
+    width: 55vw;
+    height: 71vw;
+     background: url("../img/qwzs/icon4.png") no-repeat center;
+     -webkit-background-size: 100% 100%;
+     background-size: 100% 100%;
+    animation: left 2.4s;
+ }
+.swjt{
+    width: 100%;
+    height: 100%;
+    background: url("../img/swjtbg.png") no-repeat center;
+    background-size: 100% 100% ;
+    display: none;
+}
+.swjt .icon1{
+    position: absolute;
+    top: 20vh;
+    left: 7vw;
+    width: 90vw;
+    height: 90vw;
+    background: url("../img/swjtroll.png") no-repeat center;
+    background-size: 100% 100% ;
+    animation: roll  20s linear infinite;
+}
+.tjw{
+    width: 100%;
+    height: 100%;
+    background: url("../img/tjwbg.png") no-repeat center;
+    background-size: 100% 100% ;
+    display: none;
+}
+.tjw .icon1 {
+    position: absolute;
+    top: 21vh;
+    left: 56vw;
+    width: 24vw;
+    height: 43vh;
+    background: url("../img/tjw1.png") no-repeat center;
+    background-size: 100% 100%;
+    animation: ss 1.6s linear infinite;
+    display: none;
+}
+.tjw .icon2 {
+    position: absolute;
+    top: 0vh;
+    left: 39vw;
+    width: 19vw;
+    height: 30vh;
+    background: url("../img/tjw2.png") no-repeat center;
+    background-size: 100% 100%;
+    animation: ss 1.6s linear infinite;
+    display: none;
+}
+.tjw .icon3 {
+     position: absolute;
+     top: 1vh;
+     left: 59vw;
+     width: 40vw;
+     height: 8vh;
+     background: url("../img/tjw3.png") no-repeat center;
+     background-size: 100% 100%;
+     animation: ss 1.6s linear infinite;
+ }
+.tjw .icon4 {
+     position: absolute;
+     top: 58vh;
+     left: 53vw;
+     width: 48vw;
+     height: 15vh;
+     background: url("../img/tjw4.png") no-repeat center;
+     background-size: 100% 100%;
+     animation: ss 1.6s linear infinite;
+    display: none;
+ }
+.tjw .icon5 {
+    position: absolute;
+    top: 35vh;
+    left: 32vw;
+    width: 24vw;
+    height: 31vh;
+    background: url("../img/tjw5.png") no-repeat center;
+    background-size: 100% 100%;
+    animation: ss 1.6s linear infinite;
+    display: none;
+}
+.tjw .benan{
+    display: inline-block;
+    position: absolute;
+    top: 21vh;
+    left: 41vw;
+    width: 24vw;
+    height: 14vw;
+    background: url("../img/benan.png") no-repeat center;
+    background-size: 100% 100%;
+    animation: big 1.6s ;
+}
+
+.xmpt{
+    width: 100%;
+    height: 100%;
+    background: url("../img/xmptbg.png") no-repeat center;
+    background-size: 100% 100%;
+    display: none;
+}
+.xmpt .icon1 {
+    position: absolute;
+    top: 52vh;
+    left: 20vw;
+    width: 32vw;
+    height: 11vw;
+    background: url("../img/xmpt1.png") no-repeat center;
+    background-size: 100% 100%;
+    animation: big 1.6s;
+}
+.xmpt .icon2 {
+     position: absolute;
+     top: 60vh;
+     left: 7vw;
+     width: 32vw;
+     height: 11vw;
+     background: url("../img/xmpt2.png") no-repeat center;
+     background-size: 100% 100%;
+    animation: big 1.6s;
+ }
+.xmpt .icon3 {
+    position: absolute;
+    top: 49vh;
+    left: 69vw;
+    width: 32vw;
+    height: 11vw;
+    background: url("../img/xmpt3.png") no-repeat center;
+    background-size: 100% 100%;
+    animation: big 1.6s;
+}
+.xmpt .icon4 {
+    position: absolute;
+    top: 69vh;
+    left: 39vw;
+    width: 31vw;
+    height: 12vw;
+    background: url("../img/xmpt4.png") no-repeat center;
+    background-size: 100% 100%;
+    animation: big 1.6s;
+}
+.xmpt .icon5 {
+     position: absolute;
+     top: 42vh;
+     left: 39vw;
+     width: 32vw;
+     height: 11vw;
+     background: url("../img/xmpt5.png") no-repeat center;
+     background-size: 100% 100%;
+    animation: big 1.6s;
+ }
+.xmpt .icon6 {
+     position: absolute;
+     top: 45vh;
+     left: 56vw;
+     width: 32vw;
+     height: 11vw;
+     background: url("../img/xmpt6.png") no-repeat center;
+     background-size: 100% 100%;
+    animation: big 1.6s;
+ }
+.xmpt .icon7 {
+    position: absolute;
+    top: 61vh;
+    left: 60vw;
+    width: 29vw;
+    height: 11vw;
+    background: url("../img/xmpt7.png") no-repeat center;
+    background-size: 100% 100%;
+    animation: big 1.6s;
+}
+.xmpt .icon8 {
+    position: absolute;
+    top: 44vh;
+    left: 4vw;
+    width: 33vw;
+    height: 11vw;
+    background: url("../img/xmpt8.png") no-repeat center;
+    background-size: 100% 100%;
+    animation: big 1.6s;
+}
+.xmpt .benan{
+    position: absolute;
+    top: 51vh;
+    left: 45vw;
+    width: 28vw;
+    height: 16vw;
+    background: url("../img/benan.png") no-repeat center;
+    background-size: 100% 100%;
+    animation: big 1.6s ;
+}
+.choicelist{
+    position: absolute;
+    top: 87vh;
+    left: 22vw;
+    height: 60vw;
+    width: 74vw;
+    transform: translateY(-60vw);
+    z-index: 1000;
+}
+.choicelist .list1{
+    float: right;
+    height: 100%;
+    width: 24vw;
+}
+.choicelist .list1 li{
+    height:12vw;
+    width: 24vw;
+}
+.choicelist .list1 li i{
+    width: 100%;
+    height: 8vw;
+    margin-bottom: 4vw;
+    display: inline-block;
+}
+.choicelist .list1 li:nth-child(1) i{
+    background: url("../img/w1.png") no-repeat center;
+    background-size: 100% 100%;
+}
+.choicelist .list1 li:nth-child(2) i{
+    background: url("../img/w2.png") no-repeat center;
+    background-size: 100% 100%;
+}
+.choicelist .list1 li:nth-child(3) i{
+    background: url("../img/w3.png") no-repeat center;
+    background-size: 100% 100%;
+}
+.choicelist .list1 li:nth-child(4) i{
+    background: url("../img/w4.png") no-repeat center;
+    background-size: 100% 100%;
+}.choicelist .list1 li:nth-child(5) i{
+     background: url("../img/w5.png") no-repeat center;
+     background-size: 100% 100%;
+ }
+.choicelist .list1 li:nth-child(1) .active{
+    background: url("../img/1ed.png") no-repeat center;
+    background-size: 100% 100%;
+}
+.choicelist .list1 li:nth-child(2) .active{
+    background: url("../img/2ed.png") no-repeat center;
+    background-size: 100% 100%;
+}
+.choicelist .list1 li:nth-child(3) .active{
+    background: url("../img/3ed.png") no-repeat center;
+    background-size: 100% 100%;
+}
+.choicelist .list1 li:nth-child(4) .active{
+    background: url("../img/4ed.png") no-repeat center;
+    background-size: 100% 100%;
+}.choicelist .list1 li:nth-child(5) .active{
+     background: url("../img/5ed.png") no-repeat center;
+     background-size: 100% 100%;
+ }
+.choicelist .list2{
+    margin-top: 10vw;
+    height: 40vw;
+    width: 48vw;
+    background: url("../img/list2bg.png") no-repeat center;
+    background-size: 100% 100%;
+    display: none;
+    animation: left 2.4s;
+}
+.choicelist .list2 li{
+    float: left;
+    height:12vw;
+    width: 24vw;
+}
+.choicelist .list2 li i{
+    width: 100%;
+    height: 8vw;
+    margin: 3vw 0;
+    display: inline-block;
+}
+.choicelist .list2 li:nth-child(1) i{
+    background: url("../img/to1.png") no-repeat center;
+    background-size: 78% 92%;
+}
+.choicelist .list2 li:nth-child(2) i{
+    background: url("../img/to2.png") no-repeat center;
+    background-size: 78% 92%;
+}
+.choicelist .list2 li:nth-child(3) i{
+    background: url("../img/to3.png") no-repeat center;
+    background-size: 78% 92%;
+}
+.choicelist .list2 li:nth-child(4) i{
+    background: url("../img/to4.png") no-repeat center;
+    background-size: 78% 92%;
+}.choicelist .list2 li:nth-child(5) i{
+     background: url("../img/to5.png") no-repeat center;
+     background-size: 78% 92%;
+ }
+.choicelist .list2 li:nth-child(1) .active{
+    background: url("../img/to1ed.png") no-repeat center;
+    background-size: 78% 92%;
+}
+.choicelist .list2 li:nth-child(2) .active{
+    background: url("../img/to2ed.png") no-repeat center;
+    background-size: 78% 92%;
+}
+.choicelist .list2 li:nth-child(3) .active{
+    background: url("../img/to3ed.png") no-repeat center;
+    background-size: 78% 92%;
+}
+.choicelist .list2 li:nth-child(4) .active{
+    background: url("../img/to4ed.png") no-repeat center;
+    background-size: 78% 92%;
+}.choicelist .list2 li:nth-child(5) .active{
+     background: url("../img/to5ed.png") no-repeat center;
+     background-size: 78% 92%;
+ }
+.qj{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1001;
+    display: none;
+
+}
+.goback{
+    position: absolute;
+    top: 10vh;
+    left: 70vw;
+    width: 21vw;
+    height: 9vw;
+    background: url("../img/goback.png") no-repeat center;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    display: none;
+    z-index: 1002;
+}

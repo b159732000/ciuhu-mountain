@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>区位展示</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css"/>
+    <link rel="stylesheet" type="text/css" href="css/qwzs.css"/>
+    <script src="js/jquery-1.8.2.min.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body >
+
+    <div class="content">
+
+        <div class="sdwq">
+            <div class="icon1"></div>
+            <div class="icon2"></div>
+            <div class="icon3"></div>
+            <div class="icon4"></div>
+        </div>
+
+        <div class="swjt">
+            <div class="icon1"></div>
+        </div>
+
+        <div class="tjw">
+            <div class="icon1"></div>
+            <div class="icon2"></div>
+            <div class="icon3 "></div>
+            <div class="icon4"></div>
+            <div class="icon5"></div>
+            <i class="benan"></i>
+        </div>
+
+        <div class="xmpt">
+            <div class="icon1"></div>
+            <div class="icon2"></div>
+            <div class="icon3 "></div>
+            <div class="icon4"></div>
+            <div class="icon5"></div>
+            <div class="icon6"></div>
+            <div class="icon7"></div>
+            <div class="icon8"></div>
+            <div class="benan"></div>
+        </div>
+        <div class="choicelist">
+            <ul class="list1">
+                <li><i class="active"></i></li>
+                <li><i></i></li>
+                <li><i></i></li>
+                <li><i></i></li>
+                <li><i></i></li>
+            </ul>
+            <ul class="list2">
+                <li><i></i></li>
+                <li><i></i></li>
+                <li><i class="active"></i></li>
+                <li><i></i></li>
+                <li><i></i></li>
+            </ul>
+
+        </div>
+        <div class="goback"></div>
+    </div>
+    <iframe class="qj"  src="qj/39/pano/index.html"></iframe>
+    <script type="text/javascript">
+        $(function(){
+            $('.list1 li').click(function(){
+                $('.sdwq').hide();
+                $('.swjt').hide();
+                $('.tjw').hide();
+                $('.xmpt').hide();
+                $('.list2').hide();
+                $('.qj').hide();
+                $('.list1 li i').removeClass('active');
+                $(this).find('i').addClass('active');
+                var num = $(this).index();
+                switch (num)
+                {
+                    case 0:
+                        $('.sdwq').show();
+                        break;
+                    case 1:
+                        $('.swjt').show();
+                        break;
+                    case 2:
+                        $('.tjw').show();
+                        $('.list2').show();
+                        break;
+                    case 3:
+                        $('.xmpt').show();
+                        break;
+                    case 4:
+                        $('.goback').show();
+                        $('.qj').show();
+                        $('.sdwq').show();
+                        $(this).find('i').removeClass('active');
+                        $('.list1 li').eq(0).find('i').addClass('active');
+                        break;
+                }
+            })
+            $('.goback').click(function(){
+                $(this).hide();
+                $('.qj').hide();
+            })
+            $('.list2 li').click(function(){
+                $('.tjw div').hide();
+
+                $('.list2 li i').removeClass('active');
+                $(this).find('i').addClass('active');
+                var num = $(this).index();
+                $('.tjw div').eq(num).show();
+
+            })
+        })
+    </script>
+
+
+</body>
+</html>

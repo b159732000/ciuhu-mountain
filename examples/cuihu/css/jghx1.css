@@ -1,0 +1,646 @@
+@keyframes top {
+    0%{
+         transform: translateY(50vw);opacity: 0;
+     }
+    100%{
+        transform: translateY(0);opacity: 1;
+    }
+    
+}
+.content{
+    background:url("../img/fshx/jghxbg.png") no-repeat center;
+    background-size: 100% 100%;
+}
+.housemess{
+    width: 32vw;
+    height: 28vw;
+    background: url("../img/zshx/TXT/w1-TXT.png")  no-repeat center;
+    background-size: 67% 65%;
+}
+.xulie{
+    width: 90vw;
+    height: 66vw;
+    box-shadow: darkgrey 10px 10px 30px 5px;
+    margin-left: 5vw;
+}
+.map{
+    position: absolute;
+    top:98vw;
+    left:4vw;
+    width: 30vw;
+    height: 24vw;
+    background: url("../img/zshx/map/bjt-w1.png") no-repeat center;
+    background-size: 100% 100%;
+}
+.zsm{
+    background: url("../img/zshx/map/bjt-w1.png") no-repeat center;
+    background-size: 100% 100%;
+}
+.fsm{
+    background: url("../img/fshx/map/Q7-map.png") no-repeat center;
+    background-size: 100% 100%;
+}
+.ffhh{
+     float: right;
+     width: 30vw;
+     height: 12vw;
+     background: url("../img/btn/toh.png") no-repeat center;
+     background-size: 80% 36%;
+     margin: 2vh 2vw 0 0 ;
+     z-index: 10000;
+
+ }
+
+.ffhh  i{
+    display: inline-block;
+    height: 12vw;
+    width: 30vw;
+    background: url('../img/btn/fen.png') no-repeat center;
+    -webkit-background-size: 45% 45%;
+    background-size: 45% 45%;
+}
+.hhff{
+    float: right;
+    width: 30vw;
+    height: 12vw;
+    background: url("../img/btn/toh.png") no-repeat center;
+    background-size: 80% 36%;
+    margin: 2vh 2vw 0 0 ;
+    z-index: 10000;
+
+}
+
+.hhff  i{
+    display: inline-block;
+    height: 12vw;
+    width: 30vw;
+    background: url('../img/btn/he.png') no-repeat center;
+    -webkit-background-size: 45% 45%;
+    background-size: 45% 45%;
+}
+.thyorhty{
+    position: absolute;
+    top: 88vh;
+    left: 20vw;
+    height: 10vw;
+    width: 60vw;
+    margin-top: -10vw;
+}
+.thyorhty li{
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+.thyorhty .active{
+    background: url("../img/btn/toh.png") no-repeat center;
+    background-size: 88% 45% ;
+}
+.thyorhty li i{
+    display: inline-block;
+    height: 6vw;
+    width: 13vw;
+    margin: 2vw 9vw;
+}
+.thyorhty li:nth-child(1) i{
+    background: url('../img/btn/thy.png') no-repeat center;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;:
+}
+.thyorhty li:nth-child(2) i{
+    background: url('../img/btn/hty.png') no-repeat center;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;:
+}
+.bigmap1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background:url("../img/fshx/jghxbg.png") no-repeat center;
+    background-size: 100% 100%;
+    z-index: 1000;
+}
+.zs .loutip{
+    width: 20vw;
+    height: 50vw;
+    background: url("../img/zshx/zs.png") no-repeat bottom;
+    -webkit-background-size: 30% 60%;
+    background-size: 30% 60%;
+}
+.fs .loutip{
+     width: 20vw;
+     height: 35vw;
+     background: url("../img/fshx/fs.png") no-repeat bottom;
+     -webkit-background-size: 30% 65%;
+     background-size: 30% 65%;
+ }
+.zs .mapshow{
+    width: 50vw;
+    height: 39vw;
+    background: url(../img/zshx/map/bjt-w1.png) no-repeat bottom;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    margin: -30vw auto 10vw;
+}
+.fs .mapshow{
+    width: 50vw;
+    height: 39vw;
+    background: url("../img/fshx/map/Q7-map.png") no-repeat bottom;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    margin: -17vw auto 10vw;
+}
+.choicel{
+    float: left;
+    height: 30vw;
+    margin-left: 8vw;
+}
+.choicel div{
+    float: left;
+    width: 10vw;
+    height: 30vw;
+    margin-right: 2vw;
+}
+.choicel ul{
+    float: left;
+    height: 30vw;
+}
+.choicel ul li{
+    float: left;
+    height: 15vw;
+    width: 10vw;
+    margin-right: 2vw;
+}
+
+.louking div{
+    background: url("../img/zshx/king.png") no-repeat center;
+    -webkit-background-size: 62% 73%;
+    background-size: 62% 73%;
+}
+.fslouking div{
+    background: url("../img/zshx/king.png") no-repeat center;
+    -webkit-background-size: 62% 73%;
+    background-size: 62% 73%;
+}
+.louking li{
+    background: url("../img/zshx/W1.png") no-repeat center;
+    -webkit-background-size: 80% 50%;
+    background-size: 80% 50%;
+
+}
+.alone div{
+    background: url("../img/zshx/alone.png") no-repeat center;
+    -webkit-background-size: 62% 73%;
+    background-size: 62% 73%;
+}
+.alone ul{
+    width: 30vw;
+}
+.alone li:nth-child(1){
+     background: url("../img/zshx/Q1.png") no-repeat center;
+     -webkit-background-size: 80% 50%;
+     background-size: 80% 50%;
+
+ }
+.alone li:nth-child(2){
+    background: url("../img/zshx/Q2.png") no-repeat center;
+    -webkit-background-size: 80% 50%;
+    background-size: 80% 50%;
+}
+.alone li:nth-child(3){
+     background: url("../img/zshx/Q3.png") no-repeat center;
+     -webkit-background-size: 80% 50%;
+     background-size: 80% 50%;
+ }
+.alone li:nth-child(4){
+      background: url("../img/zshx/q4.png") no-repeat center;
+      -webkit-background-size: 80% 50%;
+      background-size: 80% 50%;
+  }
+.toghter div{
+    background: url("../img/zshx/alone.png") no-repeat center;
+    -webkit-background-size: 62% 73%;
+    background-size: 62% 73%;
+}
+.toghter ul{
+    width: 80vw;
+}
+.toghter li:nth-child(1){
+    background: url("../img/zshx/z1.png") no-repeat center;
+    -webkit-background-size: 80% 50%;
+    background-size: 80% 50%;
+
+}
+.toghter li:nth-child(2){
+    background: url("../img/zshx/z1a.png") no-repeat center;
+    -webkit-background-size: 100% 50%;
+    background-size: 100% 50%;
+}
+.toghter li:nth-child(3){
+     background: url("../img/zshx/z2.png") no-repeat center;
+     -webkit-background-size: 80% 50%;
+     background-size: 80% 50%;
+ }
+.toghter li:nth-child(4){
+      background: url("../img/zshx/z3.png") no-repeat center;
+      -webkit-background-size: 80% 50%;
+      background-size: 80% 50%;
+  }
+.toghter li:nth-child(5){
+    background: url("../img/zshx/z4.png") no-repeat center;
+    -webkit-background-size: 80% 50%;
+    background-size: 80% 50%;
+
+}
+.toghter li:nth-child(6){
+    background: url("../img/zshx/z5.png") no-repeat center;
+    -webkit-background-size: 80% 50%;
+    background-size: 80% 50%;
+}
+.toghter li:nth-child(7){
+    background: url("../img/zshx/z5a.png") no-repeat center;
+    -webkit-background-size: 100% 50%;
+    background-size: 100% 50%;
+}
+.toghter li:nth-child(8){
+    background: url("../img/zshx/z6.png") no-repeat center;
+    -webkit-background-size: 80% 50%;
+    background-size: 80% 50%;
+}
+.toghter li:nth-child(9){
+    background: url("../img/zshx/z6a.png") no-repeat center;
+    -webkit-background-size: 100% 50%;
+    background-size: 100% 50%;
+
+}
+.toghter li:nth-child(10){
+    background: url("../img/zshx/z7.png") no-repeat center;
+    -webkit-background-size: 80% 50%;
+    background-size: 80% 50%;
+}
+.toghter li:nth-child(11){
+    background: url("../img/zshx/z7a.png") no-repeat center;
+    -webkit-background-size: 100% 50%;
+    background-size: 100% 50%;
+}
+.fslouking li{
+    background: url("../img/fshx/W2.png") no-repeat center;
+    -webkit-background-size: 80% 50%;
+    background-size: 80% 50%;
+}
+.fsalone  li:nth-child(1){
+    background: url("../img/fshx/Q1.png") no-repeat center;
+    -webkit-background-size: 80% 50%;
+    background-size: 80% 50%;
+}
+.fsalone  li:nth-child(2){
+    background: url("../img/fshx/Q2.png") no-repeat center;
+    -webkit-background-size: 80% 50%;
+    background-size: 80% 50%;
+}
+.fsalone  li:nth-child(3){
+    background: url("../img/fshx/Q3.png") no-repeat center;
+    -webkit-background-size: 80% 50%;
+    background-size: 80% 50%;
+}
+.fsalone  li:nth-child(4){
+    background: url("../img/fshx/Q4-1.png") no-repeat center;
+    -webkit-background-size: 80% 50%;
+    background-size: 80% 50%;
+}
+.fsalone  li:nth-child(5){
+    background: url("../img/fshx/Q6a.png") no-repeat center;
+    -webkit-background-size: 100% 50%;
+    background-size: 100% 50%;
+}
+.fsalone  li:nth-child(6){
+     background: url("../img/fshx/Q4.png") no-repeat center;
+     -webkit-background-size: 80% 50%;
+     background-size: 80% 50%;
+ }
+.fsalone  li:nth-child(7){
+      background: url("../img/fshx/Q7.png") no-repeat center;
+      -webkit-background-size: 80% 50%;
+      background-size: 80% 50%;
+  }
+
+.fsalone div{
+    background: url("../img/zshx/alone.png") no-repeat center;
+    -webkit-background-size: 62% 73%;
+    background-size: 62% 73%;
+}
+.fsalone ul{
+    width: 80vw;
+}
+.pmt2{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background:url("../img/fshx/jghxbg.png") no-repeat center;
+    background-size: 100% 100%;
+    z-index: 1001;
+}
+.pmt2 .pmtshow{
+    width: 100vw;
+    height: 100vh;
+
+}
+.w1_1{
+    background: url("../img/zshx/hxcc/W1-1.png") no-repeat center;
+    background-size: 100% 100%;
+}
+.pmt2 ul{
+    position: absolute;
+    top: 50vh;
+    left: 80vw;
+    width: 15vw;
+    height: 40vw;
+    margin-top: -30vw;
+}
+.pmt2 ul li{
+    width: 15vw;
+    height: 15vw;
+    margin-bottom: 5vw;
+}
+.pmt2 ul li i{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+.pmt2 ul li:nth-child(1) i{
+     background: url("../img/btn/-1F.png") no-repeat center;
+     background-size: 100% 100%;
+ }
+.pmt2 ul li:nth-child(2) i{
+    background: url("../img/btn/1F.png") no-repeat center;
+    background-size: 100% 100%;
+}
+
+.pmt2 ul li:nth-child(1) .active{
+    background: url("../img/btn/-1Fs.png") no-repeat center;
+    background-size: 100% 100%;
+}
+.pmt2 ul li:nth-child(2) .active{
+    background: url("../img/btn/1Fs.png") no-repeat center;
+    background-size: 100% 100%;
+}
+.pmt2 ul li:nth-child(3) i{
+    background: url("../img/btn/2F.png") no-repeat center;
+    background-size: 100% 100%;
+}
+
+.pmt2 ul li:nth-child(3) .active{
+    background: url("../img/btn/2Fs.png") no-repeat center;
+    background-size: 100% 100%;
+}
+.choice2{
+    position: absolute;
+    top: 80vh;
+    left: 0;
+    height: 10vw;
+    width: 100vw;
+    /*margin-top: -10vw;*/
+}
+.choice2 div{
+    float: left;
+    width: 33%;
+    height: 100%;
+}
+.choice2 .active{
+    background: url("../img/btn/toh.png") no-repeat center;
+    background-size: 74% 45% ;
+}
+.choice2 div i{
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+}
+.choice2 div:nth-child(1) i{
+    background: url('../img/btn/swlp.png') no-repeat center;
+    -webkit-background-size: 100% 100%;
+    background-size: 50% 50%;
+}
+
+.choice2 div:nth-child(2) i{
+    background: url('../img/btn/swsp.png') no-repeat center;
+    -webkit-background-size: 100% 100%;
+    background-size: 50% 50%;
+}
+.choice2 div:nth-child(3) i{
+    background: url('../img/btn/qjkf.png') no-repeat center;
+    -webkit-background-size: 100% 100%;
+    background-size: 50% 50%;
+}
+.vrkanfang{
+    position: absolute;
+    top: 38vh;
+    left: 83vw;
+    width: 15vw;
+    height: 40vw;
+    margin-top: -30vw;
+}
+.vrkanfang ul{
+    width: 15vw;
+    height: 40vw;
+}
+.vrkanfang ul li{
+    width: 15vw;
+    height: 15vw;
+    margin-bottom: 5vw;
+}
+.vrkanfang ul li i{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+.vrkanfang ul li:nth-child(1) i{
+    background: url("../img/btn/-1F.png") no-repeat center;
+    background-size: 100% 100%;
+}
+.vrkanfang ul li:nth-child(2) i{
+    background: url("../img/btn/1F.png") no-repeat center;
+    background-size: 100% 100%;
+}
+
+.vrkanfang ul li:nth-child(1) .active{
+    background: url("../img/btn/-1Fs.png") no-repeat center;
+    background-size: 100% 100%;
+}
+.vrkanfang ul li:nth-child(2) .active{
+    background: url("../img/btn/1Fs.png") no-repeat center;
+    background-size: 100% 100%;
+}
+.vrkanfang ul li:nth-child(3) i{
+    background: url("../img/btn/2F.png") no-repeat center;
+    background-size: 100% 100%;
+}
+
+.vrkanfang ul li:nth-child(3) .active{
+    background: url("../img/btn/2Fs.png") no-repeat center;
+    background-size: 100% 100%;
+}
+.qjlist{
+    position: absolute;
+    top: 36vh;
+    left: 0vw;
+    height: 57vw;
+    width: 80vw;
+    margin-top: -30vw;
+    background: url(../img/qjk.png) no-repeat center;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    animation: top 1.8s;
+    display: none;
+    padding: 10vw;
+}
+.qjlist li{
+    float: left;
+    width: 24vw;
+    height: 12vw;
+}
+.fsqj li:nth-child(1){
+     background: url("../img/fshx/swsd/jt.png") no-repeat center;
+     background-size: 92% 85%;
+ }
+.fsqj li:nth-child(2){
+    background: url("../img/fshx/swsd/qp.png") no-repeat center;
+    background-size: 92% 85%;
+}
+.fsqj li:nth-child(3){
+    background: url("../img/fshx/swsd/yl.png") no-repeat center;
+    background-size: 92% 85%;
+}
+.fsqj li:nth-child(4){
+    background: url("../img/fshx/swsd/js.png") no-repeat center;
+    background-size: 92% 85%;
+}
+.fsqj li:nth-child(5){
+    background: url("../img/fshx/swsd/yj.png") no-repeat center;
+    background-size: 92% 85%;
+}
+.fsqj li:nth-child(6){
+    background: url("../img/fshx/swsd/kt.png") no-repeat center;
+    background-size: 92% 85%;
+}
+.fsqj li:nth-child(7){
+    background: url("../img/fshx/swsd/ct.png") no-repeat center;
+    background-size: 92% 85%;
+}
+.fsqj li:nth-child(8){
+    background: url("../img/fshx/swsd/mt.png") no-repeat center;
+    background-size: 92% 85%;
+}
+.fsqj li:nth-child(9){
+    background: url("../img/fshx/swsd/ws.png") no-repeat center;
+    background-size: 92% 85%;
+}
+.fsqj li:nth-child(10){
+    background: url("../img/fshx/swsd/fm.png") no-repeat center;
+    background-size: 92% 85%;
+}
+.fsqj li:nth-child(11){
+    background: url("../img/fshx/swsd/cw.png") no-repeat center;
+    background-size: 92% 85%;
+}
+.fsqj li:nth-child(12){
+    background: url("../img/fshx/swsd/zl.png") no-repeat center;
+    background-size: 92% 85%;
+}
+.fsqj li:nth-child(13){
+    background: url("../img/fshx/swsd/ym.png") no-repeat center;
+    background-size: 92% 85%;
+}
+
+.fsqj li:nth-child(14){
+    background: url("../img/fshx/swsd/jt.png") no-repeat center;
+    background-size: 92% 85%;
+}
+.fsqj li:nth-child(15){
+    background: url("../img/fshx/swsd/zw.png") no-repeat center;
+    background-size: 92% 85%;
+}
+.zsqj li:nth-child(1){
+    background: url("../img/zshx/swsd/yy.png") no-repeat center;
+    background-size: 92% 85%;
+}
+.zsqj li:nth-child(2){
+    background: url("../img/zshx/swsd/xx.png") no-repeat center;
+    background-size: 92% 85%;
+}
+.zsqj li:nth-child(3){
+    background: url("../img/zshx/swsd/yl.png") no-repeat center;
+    background-size: 92% 85%;
+}
+.zsqj li:nth-child(4){
+    background: url("../img/zshx/swsd/sf.png") no-repeat center;
+    background-size: 92% 85%;
+}
+.zsqj li:nth-child(5){
+    background: url("../img/zshx/swsd/kf.png") no-repeat center;
+    background-size: 92% 85%;
+}
+.zsqj li:nth-child(6){
+    background: url("../img/zshx/swsd/js.png") no-repeat center;
+    background-size: 92% 85%;
+}
+.zsqj li:nth-child(7){
+    background: url("../img/zshx/swsd/cb.png") no-repeat center;
+    background-size: 92% 85%;
+}
+.zsqj li:nth-child(8){
+    background: url("../img/zshx/swsd/zw.png") no-repeat center;
+    background-size: 92% 85%;
+}
+.zsqj li:nth-child(9){
+    background: url("../img/zshx/swsd/hk.png") no-repeat center;
+    background-size: 92% 85%;
+}
+.zsqj li:nth-child(10){
+    background: url("../img/zshx/swsd/mt.png") no-repeat center;
+    background-size: 92% 85%;
+}
+.zsqj li:nth-child(11){
+    background: url("../img/zshx/swsd/kt.png") no-repeat center;
+    background-size: 92% 85%;
+}
+.zsqj li:nth-child(12){
+    background: url("../img/zshx/swsd/jt.png") no-repeat center;
+    background-size: 92% 85%;
+}
+.zsqj li:nth-child(13){
+    background: url("../img/zshx/swsd/fm.png") no-repeat center;
+    background-size: 92% 85%;
+}
+
+.zsqj li:nth-child(14){
+    background: url("../img/zshx/swsd/ws.png") no-repeat center;
+    background-size: 92% 85%;
+}
+.zsqj li:nth-child(15){
+    background: url("../img/zshx/swsd/ym.png") no-repeat center;
+    background-size: 92% 85%;
+}
+
+.goback{
+    position: absolute;
+    top: 6vh;
+    left: 70vw;
+    width: 20vw;
+    height: 9vw;
+    background: url("../img/goback.png") no-repeat center;
+    background-size: 100% 100%;
+    z-index: 10001;
+    display: none;
+}
+.snqj{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10000;
+    display: none;
+}

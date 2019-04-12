@@ -1,0 +1,97 @@
+.container {
+
+    /* 所有元素的參考起點 */
+    /* 為了讓overflow起作用，必須用Position將此層設為參考點 */
+    position: relative;
+    overflow: hidden;
+
+    /* 作為其他元素的畫布，將此畫布設定為螢幕大小 */
+    height: 100%;
+    width: 100vw;
+
+    padding: 0;
+
+}
+
+
+/* 底部導行列 */
+.mainNav {
+    position: fixed;
+    bottom: 0;
+    z-index: 1;
+}
+
+.mainNavUl {
+    background: url(../images/bottomChoice.png);
+
+    height: 9vh;
+
+    /* 為了讓水平/垂直置中起作用 */
+    display: flex;
+
+    /* 內容垂直置中 */
+    -webkit-align-items: center;
+    align-items: center;
+
+    /* 內容水平置中 */
+    -webkit-justify-content: center;
+    justify-content: center;
+
+    margin: 0;
+}
+
+.mainNavUl li{
+    padding: 2vw;
+    -webkit-flex: 1;
+    flex: 1;
+
+        /* 為了讓水平/垂直置中起作用 */
+        display: flex;
+
+        /* 內容垂直置中 */
+        -webkit-align-items: center;
+        align-items: center;
+    
+        /* 內容水平置中 */
+        -webkit-justify-content: center;
+        justify-content: center;
+}
+
+.mainNavUl li a img {
+    margin: auto;
+
+    width: 95%;
+    /* width: 25vw;
+    height: 10vh; */
+}
+
+
+
+/* .swiper-container {
+    width: 600px;
+    height: 300px;
+} */
+
+.swiper-container {
+    width: 100%;
+    height: 736px;
+}
+
+.content .swiper-slide img {
+    text-align: center;
+    font-size: 18px;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    height: 100vh;
+}

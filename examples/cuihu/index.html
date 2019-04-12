@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>翠湖香山</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css"/>
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <script src="js/jquery-1.8.2.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+        function loadingHtml(){
+            setTimeout(function showFunc() {
+                $('.loadingHtml').hide();
+                $('.zhegai').hide();
+                $('.labelBg').show();
+                $('.ziyemian').show();
+                $('.mainMess').show();
+            },"2000")
+        }
+    </script>
+</head>
+<body onload="loadingHtml()">
+
+    <div class="content" >
+       <div class="mainMess" style="display: none">
+           <ul class="topChoice choiceWeb">
+               <li></li>
+               <li></li>
+               <li></li>
+               <li></li>
+           </ul>
+           <div class="showImg">
+               <p> </p>
+           </div>
+       </div>
+
+
+
+    </div>
+    <iframe class="ziyemian" width="100vw" height="100vh" src="" style="display:none;"></iframe>
+    <iframe class="loadingHtml" src="loading.html"></iframe>
+    <ul class="bottomChoice choiceWeb">
+        <li class="active"><i></i></li>
+        <li><i></i></li>
+        <li><i></i></li>
+        <li><i></i></li>
+    </ul>
+    <script type="text/javascript">
+        $(function(){
+            $('.choiceWeb li').click(function(){
+                $('.content').hide();
+                $('.bottomChoice li').removeClass('active');
+                $('.mainMess').hide();
+                $('.bottomChoice').show()
+                var num = $(this).index();
+                $('.bottomChoice li').eq(num).addClass('active');
+                switch (num)
+                {
+                    case 0:
+                        $('.ziyemian').attr('src','xmjs.html');
+                        break;
+                    case 1:
+                        $('.ziyemian').attr('src','qwzs.html');
+                        break;
+                    case 2:
+                        $('.ziyemian').attr('src','jghx1.html');
+                        break;
+                    case 3:
+                        $('.ziyemian').attr('src','jgzs.html');
+                        break;
+                }
+            })
+
+        })
+    </script>
+
+</body>
+</html>
