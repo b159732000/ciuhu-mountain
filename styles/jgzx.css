@@ -7,9 +7,30 @@
 
     padding: 0;
     margin: 0;
-
+    
+    background: url(../images/jqbg.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 
+.content {
+
+    height: 91vh;
+    width: 100%;
+
+    position: relative;
+    top: -5vh;
+
+    display: flex;
+    flex-direction: column;
+    /* 此時為內容水平置中 */
+    -webkit-align-items: center;
+    align-items: center;
+    /* 此時為內容垂直置中 */
+    -webkit-justify-content: center;
+    justify-content: center;
+
+}
 
 
 /* 底部導行列 */
@@ -61,4 +82,54 @@
     width: 95%;
     /* width: 25vw;
     height: 10vh; */
+}
+
+
+
+/* 本文 */
+.position {
+
+    width: 40vw;
+    height: 33vh;
+
+    display: flex;
+    flex-direction: column;
+    /* 此時為內容水平置中 */
+    -webkit-align-items: center;
+    align-items: center;
+    /* 此時為內容垂直置中 */
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+/* 迴廊群組 (縮圖+文字) */
+.position:first-child {
+    padding-bottom: 5%;
+}
+
+/* 庭院群組 (縮圖+文字) */
+.position:last-child {
+    padding-top: 5%;
+}
+
+.position a {
+    display: flex;
+    flex-direction: column;
+    /* 此時為內容水平置中 */
+    -webkit-align-items: center;
+    align-items: center;
+    /* 此時為內容垂直置中 */
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+/* 縮圖 */
+.position img {
+    width: 100%;
+}
+
+/* 文字標示 (迴廊/庭院) */
+.position .tag {
+    width: 50%;
+    margin-top: 1vh;
 }

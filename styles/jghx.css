@@ -14,7 +14,6 @@
 }
 
 .content {
-    border: 1px solid #000;
     height: 91vh;
 
     position: relative;
@@ -81,7 +80,7 @@
 
 /* 標題圖案 */
 .header {
-    border: 1px solid #000;
+    /* border: 1px solid #000; */
     height: 14vh;
 
     /* 以此為基準點 */
@@ -98,18 +97,28 @@
 }
 
 
-
+/* 展示區 */
 .showRoom {
-    border: 1px solid blue;
 
     height: 40vh;
 
     position: relative;
     overflow: hidden;
+
+    margin: 1vh 2vw;
+
+    -webkit-box-shadow: 0px 0px 2px 2px rgba(50, 50, 50, 0.69);
+    -moz-box-shadow: 0px 0px 2px 2px rgba(50, 50, 50, 0.69);
+    box-shadow: 0px 0px 2px 2px rgba(50, 50, 50, 0.69);
+}
+
+.showRoom iframe {
+    border: 1px solid #000;
+    width: 100%;
+    height: 100%;
 }
 
 .showRoom .combine {
-    border: 1px solid #000;
     position: absolute;
     bottom: 0;
 
@@ -133,10 +142,14 @@
 
 
 .map {
-    border: 1px solid red;
+    background: url(../images/clickmapbg.png);
+    background-size: 100% 100%;
+
+    /* border: 1px solid red; */
     /* 決定此區塊位置 */
     z-index: 1;
-    top: 54vh;
+    top: 58vh;
+    left: 2vw;
 
     /* 決定此區塊大小 */
     height: 18vh;
@@ -154,13 +167,231 @@
 
 }
 
-.map img {
+.map a {
     height: 90%;
+}
+
+.map img {
+    height: 100%;
 }
 
 
 
 .options {
-    border: 1px solid green;
-    height: 27vh;
+    height: 25vh;
+
+    position: relative;
+
+    display: flex;
+
+
 }
+
+.options .houseStyle {
+    /* overflow: visible; */
+}
+
+.options .houseStyle ul {
+    /* border: 1px solid #000; */
+    position: absolute;
+
+    width: 50vw;
+    height: 10vh;
+
+    bottom: 3vh;
+    left: 45vw;
+}
+
+.options .houseStyle li {
+    display: inline-block;
+    margin: 2vw;
+}
+
+.options .houseStyle #touch1 {
+    position: absolute;
+
+    width: 50%;
+    top: 3vh;
+    left: 0.5vw;
+}
+
+.options .houseStyle #touch2 {
+    position: absolute;
+
+    width: 50%;
+    top: 3vh;
+    left: 23.5vw;
+}
+
+.options .houseStyle li img {
+    display: inline-block;
+    position: relative;
+    padding-bottom: 3px;
+    margin-right: 10px;
+}
+
+/* 桃花源 */
+.options .houseStyle li:nth-child(1) img {
+    position: absolute;
+
+    top: 2.5vh;
+    left: 5vw;
+
+    height: 45%;
+}
+
+/* 海棠苑 */
+.options .houseStyle li:nth-child(2) img {
+    position: absolute;
+
+    top: 2.5vh;
+    left: 28vw;
+
+    height: 47%;
+}
+
+/* .options .houseStyle .ul .li img:first-child {
+    border: 1px solid #000;
+} */
+
+
+
+/* 看房方式選單 */
+.options .viewWay {
+
+    width: 58vw;
+    height: 4vh;
+
+    position: absolute;
+
+    top: 8vh;
+    left: 40vw;
+
+    display: flex;
+    /* 內容垂直置中 */
+    -webkit-align-items: center;
+    align-items: center;
+    /* 為內容水平分散 */
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+}
+
+.options .viewWay div {
+    display: inline-block;
+    width: 30%;
+}
+
+.options .viewWay div:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.options .viewWay div:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.options .viewWay div:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.options .viewWay .viewWayBg {
+    width: 100%;
+}
+
+.options .viewWay .viewWayBg a {
+    height: 100%;
+    padding-bottom: 0.3vh;
+}
+
+.options .viewWay div div img {
+    width: 100%;
+}
+
+
+
+/* 樓層選單正式布局 */
+.showRoom .floorChoice {
+    /* border: 1px solid #000; */
+
+    height: 17vh;
+    width: 7vw;
+
+    position: absolute;
+
+    right: 1vw;
+    bottom: 6vh;
+
+    display: flex;
+    /* 改為垂直排列 */
+    flex-direction: column;
+    /* 此時為水平置中 (平時為內容垂直置中) */
+    -webkit-align-items: center;
+    align-items: center;
+    /* 此時為垂直分散 (平時為內容水平分散) */
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+}
+
+
+/* 修正: 1.2F在iphone上delay 2.顏色調整 3.陰影被邊框截掉 */
+/* 樓層選單特效嘗試 */
+.menu-item {
+    background: #EEEEEE;
+    border-radius: 10%;
+    width: 30px;
+    height: 30px;
+    /* margin-left: -40px; */
+    /* position: absolute; */
+    color: #FFFFFF;
+    text-align: center;
+    /* line-height: 80px; */
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-transition: -webkit-transform ease-out 200ms;
+    transition: -webkit-transform ease-out 200ms;
+    transition: transform ease-out 200ms;
+    transition: transform ease-out 200ms, -webkit-transform ease-out 200ms;
+}
+
+.floorChoice a {
+    text-decoration: none;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+.blue {
+    background-color: #9A8C98;
+    box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.14);
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.12);
+
+    animation-delay: 0.4s;
+}
+
+.green {
+    background-color: rgba(74, 78, 105, 0.8);
+    box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.14);
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.12);
+
+    animation-delay: 0.3s;
+}
+
+.red {
+    background-color: rgba(34, 34, 59, 0.8);
+    box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.14);
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.12);
+
+    animation-delay: 0.2s;
+}
+
+/* 
+.menuActive {
+    transition-duration: 180ms;
+    -webkit-transition-duration: 180ms;
+    -webkit-transform: translate3d(0.08361px, -104.99997px, 0);
+    transform: translate3d(0.08361px, -104.99997px, 0);
+} */

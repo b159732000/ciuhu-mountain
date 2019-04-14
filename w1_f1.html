@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>huxing</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <!--<script>
+        // 立即生成兼容VIEWPORT
+        (function () {
+            var phoneWidth = parseInt(window.screen.width);
+            var phoneScale = phoneWidth / 640;
+            var ua = navigator.userAgent;
+            if (/Android (\d+\.\d+)/.test(ua)) {
+                // window.location.href = 'Android.html';
+                var version = parseFloat(RegExp.$1);
+                if (version > 2.3) {
+                    // andriod 2.3以上
+                    document.write('<meta name="viewport" content="width=640, minimum-scale = ' + phoneScale + ', maximum-scale = ' + phoneScale + ', target-densitydpi=device-dpi">');
+                } else {
+                    // andriod 2.3
+                    document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">');
+                }
+                // IOS及其他系统
+            } else {
+                document.write('<meta name="viewport" content="width=640, user-scalable=no">');
+            }
+        })();
+    </script>-->
+    <style type="text/css">
+        ::-webkit-scrollbar {/*隐藏滚轮*/
+            display: none;
+        }
+        *{
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+        html,body{
+            height: 100%;
+            width: 100%;
+            background: #fff;
+        }
+        .spinner {
+            margin: 45vh auto 0;
+            width: 45vw;
+            text-align: center;
+        }
+
+        .spinner > div {
+            width: 6vw;
+            height: 6vw;
+            background-color: #e78014;
+
+            border-radius: 100%;
+            display: inline-block;
+            -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+            animation: bouncedelay 1.4s infinite ease-in-out;
+            /* Prevent first frame from flickering when animation starts */
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+        }
+
+        .spinner .bounce1 {
+            -webkit-animation-delay: -0.32s;
+            animation-delay: -0.32s;
+        }
+
+        .spinner .bounce2 {
+            -webkit-animation-delay: -0.16s;
+            animation-delay: -0.16s;
+        }
+
+        @-webkit-keyframes bouncedelay {
+            0%, 80%, 100% { -webkit-transform: scale(0.0) }
+            40% { -webkit-transform: scale(1.0) }
+        }
+
+        @keyframes bouncedelay {
+            0%, 80%, 100% {
+                transform: scale(0.0);
+                -webkit-transform: scale(0.0);
+            }
+            40% {
+                transform: scale(1.0);
+                -webkit-transform: scale(1.0);
+            }
+        }
+        .logo{
+            margin: 33vh auto 0;
+            width: 45vw;
+            height: 20vw;
+            background: url(img/loadlogo.png) no-repeat center;
+            -webkit-background-size: 67% 67%;
+            background-size: 67% 67%;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    <!--<link rel="stylesheet" href="css/index.css">-->
+</head>
+<body>
+<div class="load">
+    <!--<div class="logo"></div>-->
+    <div class="spinner">
+        <div class="bounce1"></div>
+        <div class="bounce2"></div>
+        <div class="bounce3"></div>
+    </div>
+</div>
+<canvas id="animation_canvas" width="100%" height="100%" style="background-color: #fff; display: none;"></canvas>
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    //初始化参数
+    var images=[];
+    var canvas = null;
+    var ctx = null;
+    var jindu = 0;
+    //预加载序列图片
+    function loadImages(sources,callback){
+        var loadedImages = 0;
+        var numImages = 0;
+
+        var clearWidth=canvas.width;
+        var clearHeight=canvas.height;
+
+        // get num of sources
+        numImages=sources.length;
+        console.log('分母：',numImages)
+        for (var i=0,len=sources.length;i<len;i++) {
+            images[i] = new Image();
+            //当一张图片加载完成时执行
+            images[i].onload = function(){
+
+                //当所有图片加载完成时，执行回调函数callback
+                if (++loadedImages >= numImages) {
+                    callback(images);
+                    // setTimeout(function(){
+                    $('.load').hide();
+                    $('canvas').show();
+                    // },3000)
+
+                }
+
+            };
+            //把sources中的图片信息导入images数组
+            images[i].src = sources[i];
+//            console.log(images);
+        }
+    }
+    //播放图片动画
+    function playImages(images){
+        var imageNum=images.length;
+        var imageNow=0;
+
+    }
+    //初始化
+    window.onload = function(){
+
+
+        var sources = [];
+        var a =0
+        //构建图片序列数据
+        for(var i=0;i<200;i++){
+            a= i;
+            if( a < 10){
+                sources[i] = 'images/ZSZC01_f1/CnNegtiveFloor_0000' + a + '.jpg';//根据项目修改
+            }else if( a > 9 && a < 100){
+                sources[i] = 'images/ZSZC01_f1/CnNegtiveFloor_000' + a + '.jpg';
+            }else{
+                sources[i] = 'images/ZSZC01_f1/CnNegtiveFloor_00' + a + '.jpg';
+            }
+        }
+        canvas = document.getElementById("animation_canvas");
+        canvas.width =  document.body.scrollWidth;
+        canvas.height = document.body.scrollHeight;
+
+        ctx = canvas.getContext("2d");
+        //ctx.globalAlpha=0.5
+        //执行图片预加载，加载完成后执行main
+        loadImages(sources,function(images){
+            ctx.fillStyle="rgba(0,0,0,0)";
+            ctx.clearRect(0,0, document.body.scrollWidth,document.body.scrollHeight);
+            ctx.fillRect(0, 0,  document.body.scrollWidth, document.body.scrollHeight);
+            ctx.drawImage(images[1], 0, 0, document.body.scrollWidth,document.body.scrollHeight);
+        });
+        var starX = 0;
+        var nowX = 0;
+        var moveX = 0;
+        var page = 0;
+        $('canvas').on('touchstart',function(e){
+            starX = e.originalEvent.targetTouches[0].pageX;
+        });
+        $('canvas').on('touchmove',function(e){
+            nowX = e.originalEvent.targetTouches[0].pageX;
+            moveX = nowX - starX;
+            starX = nowX;
+            if( moveX < 0 ){
+                page++;
+                if( page >= 199 ){
+                    page = 0;
+                }
+
+            }else if( moveX > 0 ){
+                page--;
+                if( page < 0 ){
+                    page = 199;
+                }
+
+            }
+            ctx.fillStyle="rgba(0,0,0,0)";
+            ctx.clearRect(0,0, document.body.scrollWidth,document.body.scrollHeight);
+            ctx.fillRect(0, 0,  document.body.scrollWidth, document.body.scrollHeight);
+            ctx.drawImage(images[page], 0, 0, document.body.scrollWidth,document.body.scrollHeight);
+        });
+        $('canvas').on('touchend',function(){
+            starX = 0;
+            moveX = 0;
+            nowX = 0;
+        })
+
+    };
+
+</script>
+<!--<script type="text/javascript" src="http://tajs.qq.com/stats?sId=52797855" charset="UTF-8"></script>-->
+</html>
