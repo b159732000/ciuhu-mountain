@@ -31,6 +31,9 @@ function changeHouseStyle(selectedHouseStyle) {
         // 顯示選擇的這項的指示
         document.getElementById("swspViewWayIndicater").style.display = "";
 
+        // 隱藏全景看房清單
+        document.getElementsByClassName("qjList")[0].style.display = "none";
+
         currentHouseStyle = "thy";
 
     }
@@ -62,6 +65,9 @@ function changeHouseStyle(selectedHouseStyle) {
         // 顯示選擇的這項的指示
         document.getElementById("swspViewWayIndicater").style.display = "";
 
+        // 隱藏全景看房清單
+        document.getElementsByClassName("qjList")[0].style.display = "none";
+
         currentHouseStyle = "hty";
 
     }
@@ -92,6 +98,8 @@ function changeTo3DFloor(floorNumber) {
                 break;
 
         }
+
+
 
     }
 
@@ -204,6 +212,9 @@ function changeViewWay(selectedViewWay) {
         document.getElementById('floorOption').style.display = "none";
         setTimeout(function () { document.getElementById('combine').src = "./images/btn/fen.png"; }, 0);
 
+        // 隱藏全景看房清單
+        document.getElementsByClassName("qjList")[0].style.display = "none";
+
         // 待修: 更改動畫延遲時間失敗
         // document.getElementById("swspViewWayIndicater").style.animationDelay = "0";
         // console.log(document.getElementById("swspViewWayIndicater").style);
@@ -241,6 +252,8 @@ function changeViewWay(selectedViewWay) {
             document.getElementById('threeD').src = "./Q7_1.html";
         }
 
+        // 隱藏全景看房清單
+        document.getElementsByClassName("qjList")[0].style.display = "none";
 
     }
     // 選擇全景看房
@@ -253,8 +266,44 @@ function changeViewWay(selectedViewWay) {
         // 顯示選擇的這項的指示
         document.getElementById("swlpViewWayIndicater").style.animationDelay = "0";
         document.getElementById("qjkfViewWayIndicater").style.display = "";
+
+        // 顯示全景看房清單
+        document.getElementsByClassName("qjList")[0].style.display = "";
     }
 
+}
+
+
+
+function hideQjList() {
+    // 隱藏全景看房清單
+    document.getElementsByClassName("qjList")[0].style.display = "none";
+}
+
+
+
+// 隱藏全景和返回鍵
+function closePanomera() {
+    // 隱藏全景和返回鍵
+    document.getElementById("panomera").style.display = "none";
+    document.getElementById("getBack").style.display = "none";
+    
+    // 返回右側清單第四項
+    changeToActiveTab('w4');
+}
+
+
+
+// 打開全景、關閉全景清單
+function openPanomera(selectedId) {
+    var panomeraSrc = "./qj/" + selectedId + "/pano/index.html";
+    document.getElementById("panomera").src = panomeraSrc;
+
+
+    document.getElementById("panomera").style.display = "";
+    document.getElementById("getBack").style.display = "";
+
+    document.getElementsByClassName("qjList")[0].style.display = "none";
 }
 
 

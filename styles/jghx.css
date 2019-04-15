@@ -26,7 +26,7 @@
 .mainNav {
     position: fixed;
     bottom: 0;
-    z-index: 1;
+    z-index: 3;
 }
 
 .mainNavUl {
@@ -419,6 +419,141 @@
 
     animation-delay: 0.2s;
 }
+
+
+
+/* 全景看房清單 */
+
+.qjList {
+    background: url(../images/qjk.png);
+    background-size: 100% 100%;
+
+    height: 50vh;
+    width: 100vw;
+
+    position: absolute;
+    top: 20%;
+    left: 0;
+
+    z-index: 5;
+    
+    display: flex;
+    /* 內容垂直置中 */
+    -webkit-align-items: center;
+    align-items: center;
+    /* 為內容水平分散 */
+    -webkit-justify-content: center;
+    justify-content: center;
+
+    padding: 5%;
+}
+
+.qjList ul {
+    height: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+    /* 內容垂直置中 */
+    -webkit-align-items: center;
+    align-items: center;
+    /* 為內容水平分散 */
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+.qjList ul li {
+    display: inline-block;
+
+    position: relative;
+    width: 30%;
+    /* height: 20%; */
+
+    display: flex;
+    /* 內容垂直置中 */
+    -webkit-align-items: center;
+    align-items: center;
+    /* 為內容水平分散 */
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+
+.qjList li img {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/* 關閉qjList */
+.close {
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    width: 32px;
+    height: 32px;
+    opacity: 0.3;
+  }
+  .close:hover {
+    opacity: 1;
+  }
+  .close:before, .close:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 33px;
+    width: 2px;
+    background-color: #333;
+  }
+  .close:before {
+    transform: rotate(45deg);
+  }
+  .close:after {
+    transform: rotate(-45deg);
+  }
+
+
+
+  /* 全景 */
+iframe {
+    border: 1px solid #000;
+
+    z-index: 2;
+
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    height: 100vh;
+    width: 100vw;
+}
+
+.getBack {
+    position: absolute;
+
+    background: url(../images/goback.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    width: 20vw;
+    height: 4vh;
+
+    top: 5vh;
+    right: 5vw;
+    
+    /* 為了讓此層浮在最上面，供用戶點選 */
+    z-index: 3;
+}
+
+.getBack a {
+    /* 為了讓大小設定起作用，設定為block */
+    display: block;
+    width: 20vw;
+    height: 4vh;
+}
+
+
 
 /* 
 .menuActive {

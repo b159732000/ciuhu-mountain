@@ -382,12 +382,12 @@
 }
 
 .xmpt .icon1 {
-    
+
     background: url(../images/xmpt1.png);
     background-size: 100% 100%;
-    
+
     position: absolute;
-    
+
     width: 32vw;
     height: 7vh;
     top: 52vh;
@@ -422,9 +422,10 @@
     height: 7vh;
     top: 49vh;
     left: 69vw;
-    
+
     animation-delay: 0.2s;
 }
+
 .xmpt .icon4 {
 
     background: url(../images/xmpt4.png);
@@ -436,9 +437,10 @@
     height: 7vh;
     top: 69vh;
     left: 39vw;
-    
+
     animation-delay: 0.2s;
 }
+
 .xmpt .icon5 {
 
     background: url(../images/xmpt5.png);
@@ -450,9 +452,10 @@
     height: 7vh;
     top: 42vh;
     left: 39vw;
-    
+
     animation-delay: 0.2s;
 }
+
 .xmpt .icon6 {
 
     background: url(../images/xmpt6.png);
@@ -464,9 +467,10 @@
     height: 7vh;
     top: 45vh;
     left: 56vw;
-    
+
     animation-delay: 0.2s;
 }
+
 .xmpt .icon7 {
 
     background: url(../images/xmpt7.png);
@@ -478,9 +482,10 @@
     height: 7vh;
     top: 61vh;
     left: 60vw;
-    
+
     animation-delay: 0.2s;
 }
+
 .xmpt .icon8 {
 
     background: url(../images/xmpt8.png);
@@ -492,7 +497,7 @@
     height: 7vh;
     top: 44vh;
     left: 4vw;
-    
+
     animation-delay: 0.2s;
 }
 
@@ -514,4 +519,44 @@
 
 .secondMenu li img {
     height: 100%;
+}
+
+
+
+/* 全景 */
+iframe {
+    border: 1px solid #000;
+
+
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    height: 100vh;
+    width: 100vw;
+}
+
+.getBack {
+    position: absolute;
+
+    background: url(../images/goback.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    width: 20vw;
+    height: 4vh;
+
+    top: 5vh;
+    right: 5vw;
+    
+    /* 為了讓此層浮在最上面，供用戶點選 */
+    z-index: 3;
+}
+
+.getBack a {
+    /* 為了讓大小設定起作用，設定為block */
+    display: block;
+    width: 20vw;
+    height: 4vh;
 }

@@ -53,6 +53,8 @@ function changeToActiveTab(selectionId) {
 
         case "w5":
             secondMenuActivingTabImgFileName = "5ed";
+            document.getElementById("panomera").style.display = "";
+            document.getElementById("getBack").style.display = "";
             break;
     }
 
@@ -136,4 +138,16 @@ function changeTravelDestination(selectedTravelWay) {
             document.getElementById("tjw").getElementsByClassName("icon5")[0].style.display = "";
             break;
     }
+}
+
+
+
+// 隱藏全景和返回鍵
+function closePanomera() {
+    // 隱藏全景和返回鍵
+    document.getElementById("panomera").style.display = "none";
+    document.getElementById("getBack").style.display = "none";
+
+    // 返回右側清單第四項
+    changeToActiveTab('w4');
 }

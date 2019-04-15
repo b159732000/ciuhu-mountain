@@ -22,22 +22,36 @@
     </script>
     <script src="./scripts/lib/bootstrap.js"></script>
     <script src="./scripts/app.js"></script>
+    <script type="text/javascript">
+        function hideLoadingHtml() {
+            setTimeout(function hideLoadingHtml() {
+                document.getElementById("hideLoadingHtml").style.display = "none";
+            }, 1000);
+        }
+    </script>
 
 </head>
 
-<body onload="" id="main">
+<body onload="hideLoadingHtml()" id="main">
+
+    <iframe id="hideLoadingHtml" class="loadingHtml" src="loading.html"></iframe>
+
     <div id="mainContent">
         <!-- 首頁目錄 -->
         <div class="choiceContent">
             <div class="topChoice">
                 <ul class="choiceList">
                     <div class="column">
-                        <li><a href="./xmjs.html"><img id="topChoiceImg1" class="animated invisible hidden" src="./images/topjs.png" alt=""></a></li>
-                        <li><a href="./xmjs.html"><img id="topChoiceImg2" class="animated invisible" src="./images/topjs.png" alt=""></a></li>
+                        <li><a href="./xmjs.html"><img id="topChoiceImg1" class="animated invisible hidden"
+                                    src="./images/topjs.png" alt=""></a></li>
+                        <li><a href="./xmjs.html"><img id="topChoiceImg2" class="animated invisible"
+                                    src="./images/topjs.png" alt=""></a></li>
                     </div>
                     <div class="column">
-                        <li><a href="./xmjs.html"><img id="topChoiceImg3" class="animated invisible" src="./images/tophx.png" alt=""></a></li>
-                        <li><a href="./xmjs.html"><img id="topChoiceImg4" class="animated invisible" src="./images/topjg.png" alt=""></a></li>
+                        <li><a href="./xmjs.html"><img id="topChoiceImg3" class="animated invisible"
+                                    src="./images/tophx.png" alt=""></a></li>
+                        <li><a href="./xmjs.html"><img id="topChoiceImg4" class="animated invisible"
+                                    src="./images/topjg.png" alt=""></a></li>
                     </div>
                 </ul>
             </div>
@@ -49,13 +63,13 @@
                 <img src="./images/showImg.png" alt="">
             </div>
             <div class="wordImg invisible" id="wordImg">
-            <!-- <div class="wordImg d-none" id="wordImg"> -->
+                <!-- <div class="wordImg d-none" id="wordImg"> -->
                 <img class="" src="./images/showZi.png" alt="">
             </div>
         </div>
     </div>
 
-    
+
 </body>
 
 </html>

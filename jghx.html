@@ -18,6 +18,27 @@
 <body>
     <div class="container">
 
+        <div class="qjList" style="display: none;">
+            <ul>
+                <li><img id="jt" src="./images/fshx/swsd/jt.png" onClick="openPanomera('41')" alt=""></li>
+                <li><img id="qp" src="./images/fshx/swsd/qp.png" onClick="openPanomera('40')" alt=""></li>
+                <li><img id="yl" src="./images/fshx/swsd/yl.png" onClick="openPanomera('42')" alt=""></li>
+                <li><img id="js" src="./images/fshx/swsd/js.png" onClick="openPanomera('43')" alt=""></li>
+                <li><img id="yj" src="./images/fshx/swsd/yj.png" onClick="openPanomera('44')" alt=""></li>
+                <li><img id="kt" src="./images/fshx/swsd/kt.png" onClick="openPanomera('45')" alt=""></li>
+                <li><img id="ct" src="./images/fshx/swsd/ct.png" onClick="openPanomera('46')" alt=""></li>
+                <li><img id="mt" src="./images/fshx/swsd/mt.png" onClick="openPanomera('52')" alt=""></li>
+                <li><img id="ws" src="./images/fshx/swsd/ws.png" onClick="openPanomera('48')" alt=""></li>
+                <li><img id="fm" src="./images/fshx/swsd/fm.png" onClick="openPanomera('49')" alt=""></li>
+                <li><img id="cw" src="./images/fshx/swsd/cw.png" onClick="openPanomera('50')" alt=""></li>
+                <li><img id="zl" src="./images/fshx/swsd/zl.png" onClick="openPanomera('51')" alt=""></li>
+                <li><img id="ym" src="./images/fshx/swsd/ym.png" onClick="openPanomera('55')" alt=""></li>
+                <li><img id="jt" src="./images/fshx/swsd/jt.png" onClick="openPanomera('53')" alt=""></li>
+                <li><img id="zw" src="./images/fshx/swsd/zw.png" onClick="openPanomera('54')" alt=""></li>
+            </ul>
+            <div class="close" onclick="hideQjList()"></div>
+        </div>
+
         <div class="content">
 
             <div class="header">
@@ -34,7 +55,8 @@
                 <!-- 樓層選擇 -->
                 <div class="floorChoice" id="floorOption" style="display: none;">
                     <a href="#" onclick="changeTo3DFloor(this.text)" class="menu-item blue animated slideInRight">2F</a>
-                    <a href="#" onclick="changeTo3DFloor(this.text)" class="menu-item green animated slideInRight">1F</a>
+                    <a href="#" onclick="changeTo3DFloor(this.text)"
+                        class="menu-item green animated slideInRight">1F</a>
                     <a href="#" onclick="changeTo3DFloor(this.text)" class="menu-item red animated slideInRight">-1F</a>
                     <!-- <a href="#" class="menu-item blue"> <i class="fa fa-anchor"></i> </a>
                     <a href="#" class="menu-item green"> <i class="fa fa-coffee"></i> </a>
@@ -61,13 +83,22 @@
                 <!-- 看房方式 -->
                 <div class="viewWay">
                     <div class="animated slideInUp">
-                        <div class="viewWayBg"><a ><img id="viewWaySwsp" onclick="changeViewWay(this)" src="./images/btn/swsp.png" alt=""></a><div id="swspViewWayIndicater" class="viewWayIndicater"></div></div>
+                        <div class="viewWayBg"><a><img id="viewWaySwsp" onclick="changeViewWay(this)"
+                                    src="./images/btn/swsp.png" alt=""></a>
+                            <div id="swspViewWayIndicater" class="viewWayIndicater"></div>
+                        </div>
                     </div>
                     <div class="animated slideInUp">
-                        <div class="viewWayBg"><a ><img id="viewWaySwlp" onclick="changeViewWay(this)" src="./images/btn/swlp.png" alt=""></a><div id="swlpViewWayIndicater" class="viewWayIndicater" style="display: none;"></div></div>
+                        <div class="viewWayBg"><a><img id="viewWaySwlp" onclick="changeViewWay(this)"
+                                    src="./images/btn/swlp.png" alt=""></a>
+                            <div id="swlpViewWayIndicater" class="viewWayIndicater" style="display: none;"></div>
+                        </div>
                     </div>
                     <div class="animated slideInUp">
-                        <div class="viewWayBg"><a ><img id="viewWayQjkf" onclick="changeViewWay(this)" src="./images/btn/qjkf.png" alt=""></a><div id="qjkfViewWayIndicater" class="viewWayIndicater" style="display: none;"></div></div>
+                        <div class="viewWayBg"><a><img id="viewWayQjkf" onclick="changeViewWay(this)"
+                                    src="./images/btn/qjkf.png" alt=""></a>
+                            <div id="qjkfViewWayIndicater" class="viewWayIndicater" style="display: none;"></div>
+                        </div>
                     </div>
                 </div>
 
@@ -78,20 +109,27 @@
                         <li><img id="hty" onClick="changeHouseStyle(this.id)" src="./images/btn/hty.png" alt=""></li>
                         <!-- 金箭頭 -->
                         <img id="thy-indicate" onClick="changeHouseStyle(this.id)" src="./images/btn/toh.png" alt="">
-                        <img id="hty-indicate" onClick="changeHouseStyle(this.id)" style="visibility: hidden;" src="./images/btn/toh.png" alt="">
+                        <img id="hty-indicate" onClick="changeHouseStyle(this.id)" style="visibility: hidden;"
+                            src="./images/btn/toh.png" alt="">
                     </ul>
                 </div>
-
-
-
             </div>
         </div>
+
+        <!-- 全景和返回鍵 -->
+        <div id="getBack" class="getBack" style="display: none;">
+            <a onclick="closePanomera()"></a>
+        </div>
+        <iframe id="panomera" src="./qj/40/pano/index.html" frameborder="0" style="display: none;"></iframe>
+
+
 
         <nav class="mainNav">
             <ul class="mainNavUl">
                 <li><a href="./xmjs.html"><img src="./images/xmjs.png" alt=""></a></li>
                 <li><a href="./qwzs.html"><img src="./images/qwzs.png" alt=""></a></li>
-                <li style="background: url(./images/bcActive.png); height: 100%;"><a href="./jghx.html"><img src="./images/jghx.png" alt=""></a></li>
+                <li style="background: url(./images/bcActive.png); height: 100%;"><a href="./jghx.html"><img
+                            src="./images/jghx.png" alt=""></a></li>
                 <li><a href="./jgzx.html"><img src="./images/jgzs.png" alt=""></a></li>
             </ul>
         </nav>
