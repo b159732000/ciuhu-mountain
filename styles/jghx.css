@@ -207,7 +207,7 @@
     margin: 2vw;
 }
 
-.options .houseStyle #touch1 {
+.options .houseStyle #thy-indicate {
     position: absolute;
 
     width: 50%;
@@ -215,7 +215,7 @@
     left: 0.5vw;
 }
 
-.options .houseStyle #touch2 {
+.options .houseStyle #hty-indicate {
     position: absolute;
 
     width: 50%;

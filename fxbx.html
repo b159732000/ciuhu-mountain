@@ -19,7 +19,7 @@
         <div class="content">
             <div class="upper">
                 <div class="villaStyle"><img src="./images/fshx/fs.png" alt=""></div>
-                <div class="map"><img src="./images/fshx/map/w2-map.png" alt=""></div>
+                <div class="map"><img id="map" src="./images/fshx/map/w2-map.png" alt=""></div>
             </div>
             <div class="downSide">
 
@@ -28,7 +28,7 @@
                         <div class="buildingStyle"><img src="./images/fshx/king.png" alt="" srcset=""></div>
                         <div class="buildingList">
                             <div class="buildingCode up">
-                                <img src="./images/fshx/W2.png" alt="">
+                                <img id="w2" onClick="changeMap(this.id)" src="./images/fshx/W2.png" alt="">
                             </div>
                             <div class="buildingCode down"></div>
                         </div>
@@ -48,15 +48,14 @@
                     <div class="buildingStyle"><img src="./images/fshx/alone.png" alt="" srcset=""></div>
                     <div class="buildingList">
                         <div class="buildingCode up">
-                                <img src="./images/fshx/Q1.png" alt="">
-                                <img src="./images/fshx/Q2.png" alt="">
-                                <img src="./images/fshx/Q3.png" alt="">
-                                <img src="./images/fshx/Q4.png" alt="">
-                                <img src="./images/fshx/Q6.png" alt="">
-                                <img src="./images/fshx/Q6a.png" alt="">
+                                <img id="Q1" onClick="changeMap(this.id)" src="./images/fshx/Q1.png" alt="">
+                                <img id="Q2" onClick="changeMap(this.id)" src="./images/fshx/Q2.png" alt="">
+                                <img id="Q3" onClick="changeMap(this.id)" src="./images/fshx/Q3.png" alt="">
+                                <img id="Q4" onClick="changeMap(this.id)" src="./images/fshx/Q4.png" alt="">
+                                <img id="Q6a" onClick="changeMap(this.id)" src="./images/fshx/Q6a.png" alt="">
                         </div>
                         <div class="buildingCode down">
-                                <img src="./images/fshx/Q7.png" alt="">
+                                <img id="Q7" onClick="changeMap(this.id)" src="./images/fshx/Q7.png" alt="">
                         </div>
                     </div>
                 </div>
@@ -73,6 +72,9 @@
         </nav>
 
     </div>
+
+    <script src="./scripts/fxbx.js"></script>
+
 </body>
 
 </html>

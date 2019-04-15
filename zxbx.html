@@ -12,6 +12,7 @@
 </head>
 
 <body>
+
     <div class="container">
 
         <div class="getBack"><a href="./jghx.html"></a></div>
@@ -19,7 +20,7 @@
         <div class="content">
             <div class="upper">
                 <div class="villaStyle"><img src="./images/zshx/zs.png" alt=""></div>
-                <div class="map"><img src="./images/zshx/map/bjt-w1.png" alt=""></div>
+                <div class="map"><img id="map" src="./images/zshx/map/bjt-w1.png" alt=""></div>
             </div>
             <div class="downSide">
 
@@ -28,7 +29,7 @@
                         <div class="buildingStyle"><img src="./images/zshx/king.png" alt="" srcset=""></div>
                         <div class="buildingList">
                             <div class="buildingCode up">
-                                <img src="./images/zshx/W1.png" alt="">
+                                <img id="W1" onClick="changeMap(this.id)" src="./images/zshx/W1.png" alt="">
                             </div>
                             <div class="buildingCode down"></div>
                         </div>
@@ -37,12 +38,12 @@
                         <div class="buildingStyle"><img src="./images/zshx/alone.png" alt="" srcset=""></div>
                         <div class="buildingList">
                             <div class="buildingCode up">
-                                <img src="./images/zshx/Q1.png" alt="">
-                                <img src="./images/zshx/Q2.png" alt="">
+                                <img id="Q1" onClick="changeMap(this.id)" src="./images/zshx/Q1.png" alt="">
+                                <img id="Q2" onClick="changeMap(this.id)" src="./images/zshx/Q2.png" alt="">
                             </div>
                             <div class="buildingCode down">
-                                <img src="./images/zshx/Q3.png" alt="">
-                                <img src="./images/zshx/q4.png" alt="">
+                                <img id="Q3" onClick="changeMap(this.id)" src="./images/zshx/Q3.png" alt="">
+                                <img id="q4" onClick="changeMap(this.id)" src="./images/zshx/q4.png" alt="">
                             </div>
                         </div>
                     </div>
@@ -52,19 +53,19 @@
                     <div class="buildingStyle"><img src="./images/zshx/alone.png" alt="" srcset=""></div>
                     <div class="buildingList">
                         <div class="buildingCode up">
-                                <img src="./images/zshx/z1.png" alt="">
-                                <img src="./images/zshx/z1a.png" alt="">
-                                <img src="./images/zshx/z2.png" alt="">
-                                <img src="./images/zshx/z3.png" alt="">
-                                <img src="./images/zshx/z4.png" alt="">
-                                <img src="./images/zshx/z5.png" alt="">
+                                <img id="z1" onClick="changeMap(this.id)" src="./images/zshx/z1.png" alt="">
+                                <img id="z1a" onClick="changeMap(this.id)" src="./images/zshx/z1a.png" alt="">
+                                <img id="z2" onClick="changeMap(this.id)" src="./images/zshx/z2.png" alt="">
+                                <img id="z3" onClick="changeMap(this.id)" src="./images/zshx/z3.png" alt="">
+                                <img id="z4" onClick="changeMap(this.id)" src="./images/zshx/z4.png" alt="">
+                                <img id="z5" onClick="changeMap(this.id)" src="./images/zshx/z5.png" alt="">
                         </div>
                         <div class="buildingCode down">
-                                <img src="./images/zshx/z5a.png" alt="">
-                                <img src="./images/zshx/z6.png" alt="">
-                                <img src="./images/zshx/z6a.png" alt="">
-                                <img src="./images/zshx/z7.png" alt="">
-                                <img src="./images/zshx/z7a.png" alt="">
+                                <img id="z5a" onClick="changeMap(this.id)" src="./images/zshx/z5a.png" alt="">
+                                <img id="z6" onClick="changeMap(this.id)" src="./images/zshx/z6.png" alt="">
+                                <img id="z6a" onClick="changeMap(this.id)" src="./images/zshx/z6a.png" alt="">
+                                <img id="z7" onClick="changeMap(this.id)" src="./images/zshx/z7.png" alt="">
+                                <img id="z7a" onClick="changeMap(this.id)" src="./images/zshx/z7a.png" alt="">
                         </div>
                     </div>
                 </div>
@@ -81,6 +82,9 @@
         </nav>
 
     </div>
+
+    <script src="./scripts/zxbx.js"></script>
+
 </body>
 
 </html>
