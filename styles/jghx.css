@@ -300,14 +300,14 @@
     animation-delay: 0.3s;
 }
 .options .viewWay div:nth-child(2) .viewWayIndicater {
-    animation-delay: 0.8s;
+    animation-delay: 0.7s;
 }
 
 .options .viewWay div:nth-child(3) {
     animation-delay: 0.4s;
 }
 .options .viewWay div:nth-child(3) .viewWayIndicater {
-    animation-delay: 0.9s;
+    animation-delay: 0.7s;
 }
 
 .options .viewWay .viewWayBg {
