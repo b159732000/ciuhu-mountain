@@ -29,20 +29,20 @@
             <!-- 3D預覽圖區 -->
             <div class="showRoom">
 
-                <iframe src="./w1_1.html" frameborder="0"></iframe>
+                <iframe id="threeD" src="./w1.html" frameborder="0"></iframe>
 
                 <!-- 樓層選擇 -->
-                <div class="floorChoice">
-                    <a href="#" class="menu-item blue animated slideInRight"> 2F </a>
-                    <a href="#" class="menu-item green animated slideInRight"> 1F </a>
-                    <a href="#" class="menu-item red animated slideInRight"> -1F </a>
+                <div class="floorChoice" id="floorOption" style="display: none;">
+                    <a href="#" onclick="changeTo3DFloor(this.text)" class="menu-item blue animated slideInRight">2F</a>
+                    <a href="#" onclick="changeTo3DFloor(this.text)" class="menu-item green animated slideInRight">1F</a>
+                    <a href="#" onclick="changeTo3DFloor(this.text)" class="menu-item red animated slideInRight">-1F</a>
                     <!-- <a href="#" class="menu-item blue"> <i class="fa fa-anchor"></i> </a>
                     <a href="#" class="menu-item green"> <i class="fa fa-coffee"></i> </a>
                     <a href="#" class="menu-item red"> <i class="fa fa-heart"></i> </a> -->
                 </div>
 
                 <div class="combine">
-                    <img src="./images/btn/fen.png" alt="">
+                    <img id="combine" onClick="switchCombineBreak()" src="./images/btn/fen.png" alt="">
                 </div>
 
             </div>
@@ -50,7 +50,7 @@
 
 
             <div class="map">
-                <a href="./zxbx.html"><img src="./images/zshx/map/bjt-w1.png" alt=""></a>
+                <a href="./zxbx.html"><img id="map" src="./images/zshx/map/bjt-w1.png" alt=""></a>
             </div>
 
 
@@ -61,24 +61,24 @@
                 <!-- 看房方式 -->
                 <div class="viewWay">
                     <div class="animated slideInUp">
-                        <div class="viewWayBg"><a href=""><img src="./images/btn/swlp.png" alt=""></a></div>
+                        <div class="viewWayBg"><a href=""><img id="viewWaySwsp" src="./images/btn/swsp.png" alt=""></a><div class="viewWayIndicater"></div></div>
                     </div>
                     <div class="animated slideInUp">
-                        <div class="viewWayBg"><a href=""><img src="./images/btn/swsp.png" alt=""></a></div>
+                        <div class="viewWayBg"><a href=""><img id="viewWaySwlp" src="./images/btn/swlp.png" alt=""></a><div class="viewWayIndicater" style="visibility: hidden;"></div></div>
                     </div>
                     <div class="animated slideInUp">
-                        <div class="viewWayBg"><a href=""><img src="./images/btn/qjkf.png" alt=""></a></div>
+                        <div class="viewWayBg"><a href=""><img id="viewWayQjkf" src="./images/btn/qjkf.png" alt=""></a><div class="viewWayIndicater" style="visibility: hidden;"></div></div>
                     </div>
                 </div>
 
                 <div class="houseStyle">
                     <ul>
                         <!-- 桃花源/海棠苑 -->
-                        <li><img id="thy" src="./images/btn/thy.png" alt=""></li>
-                        <li><img id="hty" src="./images/btn/hty.png" alt=""></li>
+                        <li><img id="thy" onClick="changeHouseStyle(this.id)" src="./images/btn/thy.png" alt=""></li>
+                        <li><img id="hty" onClick="changeHouseStyle(this.id)" src="./images/btn/hty.png" alt=""></li>
                         <!-- 金箭頭 -->
-                        <img id="thy-indicate" src="./images/btn/toh.png" alt="">
-                        <img id="hty-indicate" src="./images/btn/toh.png" alt="">
+                        <img id="thy-indicate" onClick="changeHouseStyle(this.id)" src="./images/btn/toh.png" alt="">
+                        <img id="hty-indicate" onClick="changeHouseStyle(this.id)" style="visibility: hidden;" src="./images/btn/toh.png" alt="">
                     </ul>
                 </div>
 

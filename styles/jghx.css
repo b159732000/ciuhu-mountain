@@ -279,18 +279,35 @@
 .options .viewWay div {
     display: inline-block;
     width: 30%;
+
+    display: flex;
+    /* 內容垂直置中 */
+    -webkit-align-items: center;
+    align-items: center;
+    /* 為內容水平分散 */
+    -webkit-justify-content: center;
+    justify-content: center;
 }
 
 .options .viewWay div:nth-child(1) {
     animation-delay: 0.2s;
 }
+.options .viewWay div:nth-child(1) .viewWayIndicater {
+    animation-delay: 0.7s;
+}
 
 .options .viewWay div:nth-child(2) {
     animation-delay: 0.3s;
 }
+.options .viewWay div:nth-child(2) .viewWayIndicater {
+    animation-delay: 0.8s;
+}
 
 .options .viewWay div:nth-child(3) {
     animation-delay: 0.4s;
+}
+.options .viewWay div:nth-child(3) .viewWayIndicater {
+    animation-delay: 0.9s;
 }
 
 .options .viewWay .viewWayBg {
@@ -306,6 +323,21 @@
     width: 100%;
 }
 
+.options .viewWay .viewWayIndicater {
+    background-color: #B59273;
+    position: absolute;
+    animation: centerToSideIn 1s ease;
+    /* 讓動畫停留在最後一格 */
+    animation-fill-mode: forwards;
+    /* height: 10%;
+    width: 90%; */
+    bottom: 0;
+}
+@keyframes centerToSideIn {
+    from {width: 0%; height: 10%;}
+    to {width: 90%; height: 10%;}
+
+}
 
 
 /* 樓層選單正式布局 */
