@@ -2,97 +2,123 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <meta charset="utf-8">
+    <title>景观展示</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
 
-    <link rel="stylesheet" href="./styles/lib/swiper.css">
-    <link rel="stylesheet" href="./styles/Animate.css">
-    <link rel="stylesheet" href="./styles/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="./styles/main.css">
-    <link rel="stylesheet" type="text/css" href="./styles/xmjs.css">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="./styles/lib/swiper.min.css">
+    <link rel="stylesheet" href="./styles/xmjs.css">
+    <!-- Demo styles -->
+    <style>
+        html,
+        body {
+            position: relative;
+            height: 100%;
+        }
 
-    <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script src="./scripts/lib/three.js"></script> -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-    </script>
-    <script src="./scripts/lib/bootstrap.js"></script>
+        body {
+            background: #eee;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color: #000;
+            margin: 0;
+            padding: 0;
+        }
+
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+    </style>
 </head>
 
 <body>
-
-    <div class="container">
-
-        <div class="content">
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="./images/xmjs/JS1.png" alt=""></div>
-                    <div class="swiper-slide"><img src="./images/xmjs/JS2.png" alt=""></div>
-                    <div class="swiper-slide"><img src="./images/xmjs/JS3.png" alt=""></div>
-                    <div class="swiper-slide"><img src="./images/xmjs/JS4.png" alt=""></div>
-                    <div class="swiper-slide"><img src="./images/xmjs/JS5.png" alt=""></div>
-                    <div class="swiper-slide"><img src="./images/xmjs/JS6.png" alt=""></div>
-                    <div class="swiper-slide"><img src="./images/xmjs/JS7.png" alt=""></div>
-                    <div class="swiper-slide"><img src="./images/xmjs/JS8.png" alt=""></div>
-                    <div class="swiper-slide"><img src="./images/xmjs/JS9.png" alt=""></div>
-                    <div class="swiper-slide"><img src="./images/xmjs/JS10.png" alt=""></div>
-                    <div class="swiper-slide"><img src="./images/xmjs/JS11.png" alt=""></div>
-                    <div class="swiper-slide"><img src="./images/xmjs/JS12.png" alt=""></div>
-                    <div class="swiper-slide"><img src="./images/xmjs/JS13.png" alt=""></div>
-                    <div class="swiper-slide"><img src="./images/xmjs/JS14.png" alt=""></div>
-                    <div class="swiper-slide"><img src="./images/xmjs/JS15.png" alt=""></div>
-                    <div class="swiper-slide"><img src="./images/xmjs/JS16.png" alt=""></div>
-                    <div class="swiper-slide"><img src="./images/xmjs/JS17.png" alt=""></div>
-                    <div class="swiper-slide"><img src="./images/xmjs/JS18.png" alt=""></div>
-                    <div class="swiper-slide"><img src="./images/xmjs/JS19.png" alt=""></div>
-                    <div class="swiper-slide"><img src="./images/xmjs/JS20.png" alt=""></div>
-                    <div class="swiper-slide"><img src="./images/xmjs/JS21.png" alt=""></div>
-                    <div class="swiper-slide"><img src="./images/xmjs/JS22.png" alt=""></div>
-                    <div class="swiper-slide"><img src="./images/xmjs/JS23.png" alt=""></div>
-                    <div class="swiper-slide"><img src="./images/xmjs/JS24.png" alt=""></div>
-                    <div class="swiper-slide"><img src="./images/xmjs/JS25.png" alt=""></div>
-                    <div class="swiper-slide"><img src="./images/xmjs/JS26.png" alt=""></div>
-                    <div class="swiper-slide"><img src="./images/xmjs/JS27.png" alt=""></div>
-                    <div class="swiper-slide"><img src="./images/xmjs/JS28.png" alt=""></div>
-                    <div class="swiper-slide"><img src="./images/xmjs/JS29.png" alt=""></div>
-                    <div class="swiper-slide"><img src="./images/xmjs/JS30.png" alt=""></div>
-                    <div class="swiper-slide"><img src="./images/xmjs/JS31.png" alt=""></div>
-                    <div class="swiper-slide"><img src="./images/xmjs/JS32.png" alt=""></div>
-                </div>
-                <div class="swiper-pagination"></div>
-            </div>
+    <!-- Swiper -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
         </div>
-
-        <nav class="mainNav">
-            <ul class="mainNavUl">
-                <li style="background: url(./images/bcActive.png); height: 100%;"><a href="./xmjs.html"><img src="./images/xmjs.png" alt=""></a></li>
-                <li><a href="./qwzs.html"><img src="./images/qwzs.png" alt=""></a></li>
-                <li><a href="./jghx.html"><img src="./images/jghx.png" alt=""></a></li>
-                <li><a href="./jgzx.html"><img src="./images/jgzs.png" alt=""></a></li>
-            </ul>
-        </nav>
-
-        <script src="./scripts/lib/swiper.js"></script>
-        <script>
-            var mySwiper = new Swiper('.swiper-container', {
-                // Optional parameters
-                direction: 'vertical',
-                // loop: true,
-
-                // If we need pagination
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                },
-            });
-        </script>
-
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
     </div>
+    
+    <nav class="mainNav">
+        <ul class="mainNavUl">
+            <li id="navSelected" style="background: url(./images/bcActive.png);"><a href="./xmjs.html"><img
+                        src="./images/xmjs.png" alt=""></a></li>
+            <li><a href="./qwzs.html"><img src="./images/qwzs.png" alt=""></a></li>
+            <li><a href="./jghx.html"><img src="./images/jghx.png" alt=""></a></li>
+            <li><a href="./jgzx.html"><img src="./images/jgzs.png" alt=""></a></li>
+        </ul>
+    </nav>
+
+    <!-- Swiper JS -->
+    <script src="./scripts/lib/swiper.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            direction: 'vertical',
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
+    </script>
+
+
 </body>
 
 </html>

@@ -87,14 +87,36 @@ function changeTo3DFloor(floorNumber) {
 
             case "2F":
                 document.getElementById("threeD").src = "./w1_2.html";
+
+                document.getElementById("2F").classList.add("choosen");
+                document.getElementById("1F").classList.add("choosen");
+                document.getElementById("-1F").classList.add("choosen");
+                document.getElementById("1F").classList.remove("choosen");
+                document.getElementById("-1F").classList.remove("choosen");
+
                 break;
 
             case "1F":
                 document.getElementById("threeD").src = "./w1_1.html";
+
+                document.getElementById("2F").classList.add("choosen");
+                document.getElementById("1F").classList.add("choosen");
+                document.getElementById("-1F").classList.add("choosen");
+                document.getElementById("2F").classList.remove("choosen");
+                document.getElementById("-1F").classList.remove("choosen");
+
                 break;
 
             case "-1F":
                 document.getElementById("threeD").src = "./w1_f1.html";
+                
+                document.getElementById("2F").classList.add("choosen");
+                console.log(document.getElementById("1F").classList);
+                document.getElementById("1F").classList.add("choosen");
+                document.getElementById("-1F").classList.add("choosen");
+                document.getElementById("2F").classList.remove("choosen");
+                document.getElementById("1F").classList.remove("choosen");
+                
                 break;
 
         }
@@ -109,14 +131,35 @@ function changeTo3DFloor(floorNumber) {
 
             case "2F":
                 document.getElementById("threeD").src = "./Q7_2.html";
+                
+                document.getElementById("2F").classList.add("choosen");
+                document.getElementById("1F").classList.add("choosen");
+                document.getElementById("-1F").classList.add("choosen");
+                document.getElementById("1F").classList.remove("choosen");
+                document.getElementById("-1F").classList.remove("choosen");
+                
                 break;
 
             case "1F":
                 document.getElementById("threeD").src = "./Q7_1.html";
+                
+                document.getElementById("2F").classList.add("choosen");
+                document.getElementById("1F").classList.add("choosen");
+                document.getElementById("-1F").classList.add("choosen");
+                document.getElementById("2F").classList.remove("choosen");
+                document.getElementById("-1F").classList.remove("choosen");
+                
                 break;
 
             case "-1F":
                 document.getElementById("threeD").src = "./Q7_f1.html";
+                
+                document.getElementById("2F").classList.add("choosen");
+                document.getElementById("1F").classList.add("choosen");
+                document.getElementById("-1F").classList.add("choosen");
+                document.getElementById("2F").classList.remove("choosen");
+                document.getElementById("1F").classList.remove("choosen");
+                
                 break;
 
         }
@@ -155,6 +198,12 @@ function switchCombineBreak() {
         document.getElementById("swlpViewWayIndicater").style.animationDelay = "0";
         document.getElementById("swlpViewWayIndicater").style.display = "";
 
+        // 增加1F樓層指示
+        document.getElementById("2F").classList.add("choosen");
+        document.getElementById("1F").classList.add("choosen");
+        document.getElementById("-1F").classList.add("choosen");
+        document.getElementById("2F").classList.remove("choosen");
+        document.getElementById("-1F").classList.remove("choosen");
 
         currentCombine = false;
     }
@@ -251,6 +300,13 @@ function changeViewWay(selectedViewWay) {
         else {
             document.getElementById('threeD').src = "./Q7_1.html";
         }
+
+        // 增加1F樓層指示
+        document.getElementById("2F").classList.add("choosen");
+        document.getElementById("1F").classList.add("choosen");
+        document.getElementById("-1F").classList.add("choosen");
+        document.getElementById("2F").classList.remove("choosen");
+        document.getElementById("-1F").classList.remove("choosen");
 
         // 隱藏全景看房清單
         document.getElementsByClassName("qjList")[0].style.display = "none";
