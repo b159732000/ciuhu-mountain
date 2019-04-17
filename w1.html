@@ -99,14 +99,17 @@
     <!--<link rel="stylesheet" href="css/index.css">-->
 </head>
 <body>
+
 <div class="load">
     <!--<div class="logo"></div>-->
     <div class="spinner">
         <div class="bounce1"></div>
         <div class="bounce2"></div>
         <div class="bounce3"></div>
+        <div id="loadingPercentage"></div>
     </div>
 </div>
+
 <canvas id="animation_canvas" width="100%" height="100%" style="background-color: #fff; display: none;"></canvas>
 </body>
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
@@ -162,9 +165,9 @@
         var a =0
         //构建图片序列数据
         for(var i=0;i<67;i++){
-            a= 3*i+1
+            a= 3*i+1;
             sources[i] = 'https://showxxx571.oss-cn-beijing.aliyuncs.com/hvr/cuihu/img/ZSZC01/ZSZC01_00' + a + '.jpg';//根据项目修改
-
+            document.getElementById("loadingPercentage").innerHTML = a + "/200";
         }
         canvas = document.getElementById("animation_canvas");
         canvas.width =  document.body.scrollWidth;

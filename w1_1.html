@@ -106,6 +106,8 @@
         <div class="bounce1"></div>
         <div class="bounce2"></div>
         <div class="bounce3"></div>
+        <!-- <span id="loadingPercentage"></span> -->
+
     </div>
 </div>
 <canvas id="animation_canvas" width="100%" height="100%" style="background-color: #fff; display: none;"></canvas>
@@ -165,12 +167,13 @@
         for(var i=0;i<67;i++){
             a= 3*i;
             	 if( a < 10){
-                sources[i] =  'img/ZSZC01_1/0000' + a + '.jpg';//根据项目修改
+                sources[i] =  './images/ZSZC01_1/CnFirstFloor_0000' + a + '.jpg';//根据项目修改
             }else if( a > 9 && a < 100){
-                sources[i] =  'img/ZSZC01_1/000' + a + '.jpg';
+                sources[i] =  './images/ZSZC01_1/CnFirstFloor_000' + a + '.jpg';
             }else{
-                sources[i] = 'img/ZSZC01_1/00' + a + '.jpg';
+                sources[i] = './images/ZSZC01_1/CnFirstFloor_00' + a + '.jpg';
             }
+            // document.getElementById("loadingPercentage").innerHTML = a + "/200";
 
              
             
