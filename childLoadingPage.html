@@ -103,16 +103,29 @@
     <script>
         var childLoadingIsDone = false;
 
-        function loader(_success) {
+        // 如果沒載入完成，讓數字始終停留在幾趴 (預設89趴)
+        var numberStopAt = 89;
+
+        // 間隔多久使趴數加一 (預設20毫秒)
+        var percentageAddOneDuration = 20;
+
+        // 最久等多久就一定進入畫面 (預設五秒鐘)
+        var maxWaitingTime = 5000;
+
+
+        function loader(numberStop, duration, maxWatiing) {
             var loadingPercentage = document.getElementsByClassName("loadingProgressText")[0];
 
             // 每隔20毫秒百分比加一
             var w = 0,
                 t = setInterval(function () {
-                    w = w + 1;
+                    if (w < numberStop) {
+                        w = w + 1;
+                    }
                     loadingPercentage.innerHTML = w + '%';
                     if (childLoadingIsDone) {
                         loadingPercentage.innerHTML = "100" + '%';
+                        w = 100;
                         clearInterval(t);
                     }
                     if (w === 100) {
@@ -122,7 +135,7 @@
                     }
                 }, 20);
         }
-        loader();
+        loader(numberStopAt, percentageAddOneDuration, maxWaitingTime);
     </script>
 
 </body>

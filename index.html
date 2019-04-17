@@ -27,8 +27,9 @@
 
 <body onload="" id="main">
 
-
     <iframe id="hideLoadingHtml" class="loadingHtml" src="loading.html"></iframe>
+
+    <img src="./images/childLoadingAnimation.gif" style="display: none;" alt="">
 
     <div id="mainContent" style="display: none;">
         <!-- 首頁目錄 -->
@@ -63,8 +64,12 @@
         </div>
     </div>
 
-        <!-- 底部導行列 -->
-        <iframe id="mainNav" src="./navigation.html" frameborder="0" style="display: none;"></iframe>
+    <!-- 底部導行列 -->
+    <iframe id="mainNav" src="./navigation.html" frameborder="0" style="display: none;"></iframe>
+
+    <!-- loading page -->
+    <iframe id="childLoadingPage" name="childLoadingPage" class="" src="./childLoadingPage.html"
+        frameborder="0" style="display: none;"></iframe>
 
 
 

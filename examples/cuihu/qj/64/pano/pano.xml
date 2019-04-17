@@ -39,7 +39,7 @@
 
 
 
-<layer name="Iframe_close" keep="true" url="/Public/pano/images/fx.png" align="righttop" edge="righttop" width="25" height="25" x="8" y="8" onclick="closeIframe()" zorder="1" visible="false" />
+<layer name="Iframe_close" keep="true" url="" align="righttop" edge="righttop" width="25" height="25" x="8" y="8" onclick="closeIframe()" zorder="1" visible="false" />
 <action name="Iframe_bg">
 if(layer[openIframe_bg],'',
 	<!-- step one - add a background layer and fade it in -->

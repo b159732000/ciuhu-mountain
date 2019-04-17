@@ -40,9 +40,9 @@
 
 </head>
 
-<body>
+<body onload="pageIsLoad()">
 
-    <div class="container" onload="pageIsLoad()">
+    <div class="container">
 
         <!-- loading page -->
         <iframe id="childLoadingPage" name="childLoadingPage" class="" src="./childLoadingPage.html"
@@ -141,6 +141,7 @@
                     document.getElementsByClassName("content")[0].classList.remove("hidden");
                 }
             }, 500);
+            
         </script>
 
     </div>
