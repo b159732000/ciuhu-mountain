@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>navigation</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100%;
+            width: 100%;
+            position: relative;
+            top: 0;
+            bottom: 0;
+            background: #000;
+        }
+
+        /* 對外層的關係 */
+
+
+        /* 底部導行列 */
+        .mainNav {
+            position: fixed;
+            height: 100%;
+
+            bottom: 0;
+            z-index: 1;
+            box-sizing: border-box;
+        }
+
+        .mainNavUl {
+            background: url(../images/bottomChoice.png);
+
+            height: 100%;
+            position: relative;
+
+            /* 為了讓水平/垂直置中起作用 */
+            display: flex;
+            /* 內容垂直置中 */
+            -webkit-align-items: center;
+            align-items: center;
+            /* 內容水平置中 */
+            -webkit-justify-content: center;
+            justify-content: center;
+
+            margin: 0;
+            padding: 0;
+        }
+
+        .mainNavUl li {
+            padding: 2vw;
+
+            position: relative;
+
+            /* 為了讓水平/垂直置中起作用 */
+            display: flex;
+            /* 內容垂直置中 */
+            -webkit-align-items: center;
+            align-items: center;
+
+            /* 內容水平置中 */
+            -webkit-justify-content: center;
+            justify-content: center;
+        }
+
+        .navSelected {
+            position: relative;
+            height: 100%;
+            box-sizing: border-box;
+            background: url(./images/bcActive.png);
+        }
+
+        .mainNavUl li a img {
+            margin: auto;
+
+            width: 95%;
+        }
+    </style>
+    <script>
+
+    </script>
+</head>
+
+<body>
+    <nav class="mainNav">
+        <ul class="mainNavUl">
+            <li id="buttonToXmjs"><a href="./xmjs.html" target="_top"><img src="./images/xmjs.png" alt=""></a></li>
+            <li id="buttonToQwzs"><a href="./qwzs.html" target="_top"><img src="./images/qwzs.png" alt=""></a></li>
+            <li id="buttonToJghx"><a href="./jghx.html" target="_top"><img src="./images/jghx.png" alt=""></a></li>
+            <li id="buttonToJgzx"><a href="./jgzx.html" target="_top"><img src="./images/jgzs.png" alt=""></a></li>
+        </ul>
+    </nav>
+
+
+
+    <script>
+        function initChangeBgColor() {
+            var thisPage;
+
+            if (window.parent.location.href.match('xmjs')) {
+                document.getElementById('buttonToXmjs').classList.remove("navSelected");
+                document.getElementById('buttonToQwzs').classList.remove("navSelected");
+                document.getElementById('buttonToJghx').classList.remove("navSelected");
+                document.getElementById('buttonToJgzx').classList.remove("navSelected");
+                document.getElementById('buttonToXmjs').classList.add("navSelected");
+            } else if (window.parent.location.href.match('qwzs')) {
+                document.getElementById('buttonToXmjs').classList.remove("navSelected");
+                document.getElementById('buttonToQwzs').classList.remove("navSelected");
+                document.getElementById('buttonToJghx').classList.remove("navSelected");
+                document.getElementById('buttonToJgzx').classList.remove("navSelected");
+                document.getElementById('buttonToQwzs').classList.add("navSelected");
+            } else if (window.parent.location.href.match('jghx')) {
+                document.getElementById('buttonToXmjs').classList.remove("navSelected");
+                document.getElementById('buttonToQwzs').classList.remove("navSelected");
+                document.getElementById('buttonToJghx').classList.remove("navSelected");
+                document.getElementById('buttonToJgzx').classList.remove("navSelected");
+                document.getElementById('buttonToJghx').classList.add("navSelected");
+            } else if (window.parent.location.href.match('jgzx')) {
+                document.getElementById('buttonToXmjs').classList.remove("navSelected");
+                document.getElementById('buttonToQwzs').classList.remove("navSelected");
+                document.getElementById('buttonToJghx').classList.remove("navSelected");
+                document.getElementById('buttonToJgzx').classList.remove("navSelected");
+                document.getElementById('buttonToJgzx').classList.add("navSelected");
+            }
+        }
+        initChangeBgColor();
+    </script>
+
+
+
+</body>
+
+</html>

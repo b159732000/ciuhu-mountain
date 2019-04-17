@@ -8,21 +8,33 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>區位展示</title>
 
+    <style>
+        /* iframe導行列 */
+        #mainNav {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 9vh;
+            z-index: 2;
+        }
+    </style>
+
     <link rel="stylesheet" href="./styles/Animate.css">
-    <link rel="stylesheet" href="./styles/bootstrap.css">
     <link rel="stylesheet" href="./styles/main.css">
     <link rel="stylesheet" href="./styles/qwzs.css">
 
-    <script src="./scripts/qwzs.js"></script>
 
 </head>
 
 <body>
 
     <div class="container">
-
+        
+        <!-- 底部導行列 -->
+        <iframe id="mainNav" src="./navigation.html" frameborder="0"></iframe>
+        
         <div class="content">
-
+            
             <!-- 四大灣區 -->
             <div class="fourLakes">
                 <div class="location">
@@ -93,26 +105,15 @@
             </div>
 
         </div>
-        
+
         <!-- 全景和返回鍵 -->
         <div id="getBack" class="getBack" style="display: none;">
             <a onclick="closePanomera()"></a>
         </div>
         <iframe id="panomera" src="./qj/39/pano/index.html" frameborder="0" style="display: none;"></iframe>
 
-        <nav class="mainNav">
-            <ul class="mainNavUl">
-                <li><a href="./xmjs.html"><img src="./images/xmjs.png" alt=""></a></li>
-                <li style="background: url(./images/bcActive.png); height: 100%;"><a href="./qwzs.html"><img src="./images/qwzs.png" alt=""></a></li>
-                <li><a href="./jghx.html"><img src="./images/jghx.png" alt=""></a></li>
-                <li><a href="./jgzx.html"><img src="./images/jgzs.png" alt=""></a></li>
-            </ul>
-        </nav>
-
     </div>
 
-    <script src="./scripts/lib/jquery.js"></script>
-    <script src="./scripts/lib/bootstrap.js"></script>
     <script src="./scripts/qwzs.js"></script>
 </body>
 

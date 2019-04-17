@@ -7,37 +7,41 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>精工戶型</title>
 
-    <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <!-- <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet"> -->
+
+    <style>
+        /* iframe導行列 */
+        #mainNav {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 9vh;
+            z-index: 2;
+        }
+    </style>
 
     <link rel="stylesheet" href="./styles/Animate.css">
     <link rel="stylesheet" href="./styles/main.css">
     <link rel="stylesheet" href="./styles/jghx.css">
+
+
 </head>
 
 <body>
     <div class="container">
 
-        <div class="qjList" style="display: none;">
-            <ul>
-                <li><img id="jt" src="./images/fshx/swsd/jt.png" onClick="openPanomera('41')" alt=""></li>
-                <li><img id="qp" src="./images/fshx/swsd/qp.png" onClick="openPanomera('40')" alt=""></li>
-                <li><img id="yl" src="./images/fshx/swsd/yl.png" onClick="openPanomera('42')" alt=""></li>
-                <li><img id="js" src="./images/fshx/swsd/js.png" onClick="openPanomera('43')" alt=""></li>
-                <li><img id="yj" src="./images/fshx/swsd/yj.png" onClick="openPanomera('44')" alt=""></li>
-                <li><img id="kt" src="./images/fshx/swsd/kt.png" onClick="openPanomera('45')" alt=""></li>
-                <li><img id="ct" src="./images/fshx/swsd/ct.png" onClick="openPanomera('46')" alt=""></li>
-                <li><img id="mt" src="./images/fshx/swsd/mt.png" onClick="openPanomera('52')" alt=""></li>
-                <li><img id="ws" src="./images/fshx/swsd/ws.png" onClick="openPanomera('48')" alt=""></li>
-                <li><img id="fm" src="./images/fshx/swsd/fm.png" onClick="openPanomera('49')" alt=""></li>
-                <li><img id="cw" src="./images/fshx/swsd/cw.png" onClick="openPanomera('50')" alt=""></li>
-                <li><img id="zl" src="./images/fshx/swsd/zl.png" onClick="openPanomera('51')" alt=""></li>
-                <li><img id="ym" src="./images/fshx/swsd/ym.png" onClick="openPanomera('55')" alt=""></li>
-                <li><img id="jt" src="./images/fshx/swsd/jt.png" onClick="openPanomera('53')" alt=""></li>
-                <li><img id="zw" src="./images/fshx/swsd/zw.png" onClick="openPanomera('54')" alt=""></li>
+        <!-- 底部導行列 -->
+        <iframe id="mainNav" src="./navigation.html" frameborder="0"></iframe>
+        <!-- <nav class="mainNav">
+            <ul class="mainNavUl">
+                <li><a href="./xmjs.html"><img src="./images/xmjs.png" alt=""></a></li>
+                <li><a href="./qwzs.html"><img src="./images/qwzs.png" alt=""></a></li>
+                <li style="background: url(./images/bcActive.png); height: 100%;"><a href="./jghx.html"><img
+                            src="./images/jghx.png" alt=""></a></li>
+                <li><a href="./jgzx.html"><img src="./images/jgzs.png" alt=""></a></li>
             </ul>
-            <div class="close" onclick="hideQjList()"></div>
-        </div>
+        </nav> -->
 
         <div class="content">
 
@@ -47,28 +51,30 @@
 
 
 
+
             <!-- 3D預覽圖區 -->
             <div class="showRoom">
-
-                <iframe id="threeD" src="./w1.html" frameborder="0"></iframe>
-
-                <!-- 樓層選擇 -->
-                <div class="floorChoice" id="floorOption" style="display: none;">
-                    <a id="2F" href="#" onclick="changeTo3DFloor(this.text)" class="menu-item blue animated slideInRight">2F</a>
-                    <a id="1F" href="#" onclick="changeTo3DFloor(this.text)"
-                        class="menu-item green animated slideInRight">1F</a>
-                    <a id="-1F" href="#" onclick="changeTo3DFloor(this.text)" class="menu-item red animated slideInRight">-1F</a>
-                    <!-- <a href="#" class="menu-item blue"> <i class="fa fa-anchor"></i> </a>
-                    <a href="#" class="menu-item green"> <i class="fa fa-coffee"></i> </a>
-                    <a href="#" class="menu-item red"> <i class="fa fa-heart"></i> </a> -->
-                </div>
 
                 <div class="combine">
                     <img id="combine" onClick="switchCombineBreak()" src="./images/btn/fen.png" alt="">
                 </div>
 
-            </div>
 
+                <!-- 樓層選擇 -->
+                <div class="floorChoice" id="floorOption" style="display: none;">
+                    <a id="2F" href="#" onclick="changeTo3DFloor(this.text)"
+                        class="menu-item blue animated slideInRight">2F</a>
+                    <a id="1F" href="#" onclick="changeTo3DFloor(this.text)"
+                        class="menu-item green animated slideInRight">1F</a>
+                    <a id="-1F" href="#" onclick="changeTo3DFloor(this.text)"
+                        class="menu-item red animated slideInRight">-1F</a>
+                    <!-- <a href="#" class="menu-item blue"> <i class="fa fa-anchor"></i> </a>
+                            <a href="#" class="menu-item green"> <i class="fa fa-coffee"></i> </a>
+                            <a href="#" class="menu-item red"> <i class="fa fa-heart"></i> </a> -->
+                </div>
+                <iframe id="threeD" src="" frameborder="0"></iframe>
+
+            </div>
 
 
             <div class="map">
@@ -120,23 +126,44 @@
         <div id="getBack" class="getBack" style="display: none;">
             <a onclick="closePanomera()"></a>
         </div>
-        <iframe id="panomera" src="./qj/40/pano/index.html" frameborder="0" style="display: none;"></iframe>
+
+        <!-- <div class="panomeraLoading">
+
+        </div> -->
+
+        <iframe id="panomera" src="" frameborder="0" style="display: none;"></iframe>
 
 
 
-        <nav class="mainNav">
-            <ul class="mainNavUl">
-                <li><a href="./xmjs.html"><img src="./images/xmjs.png" alt=""></a></li>
-                <li><a href="./qwzs.html"><img src="./images/qwzs.png" alt=""></a></li>
-                <li style="background: url(./images/bcActive.png); height: 100%;"><a href="./jghx.html"><img
-                            src="./images/jghx.png" alt=""></a></li>
-                <li><a href="./jgzx.html"><img src="./images/jgzs.png" alt=""></a></li>
+
+
+        <div class="qjList" style="display: none;">
+            <ul>
+                <li><img id="jt" src="./images/fshx/swsd/jt.png" onClick="openPanomera('41')" alt=""></li>
+                <li><img id="qp" src="./images/fshx/swsd/qp.png" onClick="openPanomera('40')" alt=""></li>
+                <li><img id="yl" src="./images/fshx/swsd/yl.png" onClick="openPanomera('42')" alt=""></li>
+                <li><img id="js" src="./images/fshx/swsd/js.png" onClick="openPanomera('43')" alt=""></li>
+                <li><img id="yj" src="./images/fshx/swsd/yj.png" onClick="openPanomera('44')" alt=""></li>
+                <li><img id="kt" src="./images/fshx/swsd/kt.png" onClick="openPanomera('45')" alt=""></li>
+                <li><img id="ct" src="./images/fshx/swsd/ct.png" onClick="openPanomera('46')" alt=""></li>
+                <li><img id="mt" src="./images/fshx/swsd/mt.png" onClick="openPanomera('52')" alt=""></li>
+                <li><img id="ws" src="./images/fshx/swsd/ws.png" onClick="openPanomera('48')" alt=""></li>
+                <li><img id="fm" src="./images/fshx/swsd/fm.png" onClick="openPanomera('49')" alt=""></li>
+                <li><img id="cw" src="./images/fshx/swsd/cw.png" onClick="openPanomera('50')" alt=""></li>
+                <li><img id="zl" src="./images/fshx/swsd/zl.png" onClick="openPanomera('51')" alt=""></li>
+                <li><img id="ym" src="./images/fshx/swsd/ym.png" onClick="openPanomera('55')" alt=""></li>
+                <li><img id="jt" src="./images/fshx/swsd/jt.png" onClick="openPanomera('53')" alt=""></li>
+                <li><img id="zw" src="./images/fshx/swsd/zw.png" onClick="openPanomera('54')" alt=""></li>
             </ul>
-        </nav>
+            <div class="close" onclick="hideQjList()"></div>
+        </div>
 
     </div>
 
     <script src="./scripts/jghx.js"></script>
+    <script>
+        document.getElementById("threeD").src = "./w1.html"
+    </script>
 </body>
 
 </html>

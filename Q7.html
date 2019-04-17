@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>huxing</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+ <script src="js/jquery-1.8.2.min.js" type="text/javascript" charset="utf-8"></script>
     <!--<script>
         // 立即生成兼容VIEWPORT
         (function () {
@@ -89,7 +90,7 @@
             margin: 33vh auto 0;
             width: 45vw;
             height: 20vw;
-            background: url(img/loadlogo.png) no-repeat center;
+            background: url(https://showxxx571.oss-cn-beijing.aliyuncs.com/hvr/cuihu/img/loadlogo.png) no-repeat center;
             -webkit-background-size: 67% 67%;
             background-size: 67% 67%;
         }
@@ -160,9 +161,9 @@
         var sources = [];
         var a =0
         //构建图片序列数据
-        for(var i=0;i<200;i++){
-            a= i;
-            sources[i] = 'images/FSZC01/FSZC01_00' + a + '.jpg';//根据项目修改
+        for(var i=0;i<67;i++){
+            a= 3*i;
+            sources[i] = 'https://showxxx571.oss-cn-beijing.aliyuncs.com/hvr/cuihu/img/FSZC01/FSZC01_00' + a + '.jpg';//根据项目修改
 
         }
         canvas = document.getElementById("animation_canvas");
@@ -191,14 +192,14 @@
             starX = nowX;
             if( moveX < 0 ){
                 page++;
-                if( page >= 199 ){
+                if( page >= 66 ){
                     page = 0;
                 }
 
             }else if( moveX > 0 ){
                 page--;
                 if( page < 0 ){
-                    page = 199;
+                    page = 66;
                 }
 
             }

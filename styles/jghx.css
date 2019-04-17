@@ -1,5 +1,5 @@
 .container {
-    background: url(../images/fshx/jghxbg.png);
+    background: url(../images/fshx/jghxbg.jpg);
     background-size: 100% 100%;
 
     position: relative;
@@ -122,7 +122,7 @@
     position: absolute;
     bottom: 0;
 
-    z-index: 2;
+    z-index: 3;
 
     height: 5vh;
     width: 100%;
@@ -187,10 +187,6 @@
     display: flex;
 
 
-}
-
-.options .houseStyle {
-    /* overflow: visible; */
 }
 
 .options .houseStyle ul {
@@ -354,7 +350,7 @@
     right: 1vw;
     bottom: 6vh;
 
-    z-index: 2;
+    z-index: 3;
 
     display: flex;
     /* 改為垂直排列 */
@@ -524,10 +520,10 @@
 
 
   /* 全景 */
-iframe {
+#panomera {
     border: 1px solid #000;
 
-    z-index: 2;
+    z-index: 100;
 
     display: block;
     position: absolute;
@@ -552,7 +548,7 @@ iframe {
     right: 5vw;
     
     /* 為了讓此層浮在最上面，供用戶點選 */
-    z-index: 3;
+    z-index: 101;
 }
 
 .getBack a {

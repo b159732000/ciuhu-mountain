@@ -1,6 +1,4 @@
 .container {
-
-
     position: relative;
     overflow: hidden;
 
@@ -9,80 +7,18 @@
 
     padding: 0;
     margin: 0;
-
 }
 
 .content {
     position: relative;
-
-}
-
-
-/* 底部導行列 */
-.mainNav {
-    position: fixed;
-    bottom: 0;
-    z-index: 1;
-}
-
-.mainNavUl {
-    background: url(../images/bottomChoice.png);
-
-    height: 9vh;
-
-    /* 為了讓水平/垂直置中起作用 */
-    display: flex;
-
-    /* 內容垂直置中 */
-    -webkit-align-items: center;
-    align-items: center;
-
-    /* 內容水平置中 */
-    -webkit-justify-content: center;
-    justify-content: center;
-
-    margin: 0;
-}
-
-.mainNavUl li {
-    padding: 2vw;
-    -webkit-flex: 1;
-    flex: 1;
-
-    /* 為了讓水平/垂直置中起作用 */
-    display: flex;
-
-    /* 內容垂直置中 */
-    -webkit-align-items: center;
-    align-items: center;
-
-    /* 內容水平置中 */
-    -webkit-justify-content: center;
-    justify-content: center;
-}
-
-.mainNavUl li a img {
-    margin: auto;
-
-    width: 95%;
-    /* width: 25vw;
-    height: 10vh; */
-}
-
-
-
-.content {
     height: 100vh;
 }
-
-
 
 /* 四大灣區 */
 .fourLakes {
     background: url(../images/qwzs/sdwqBg.png);
 
     /* contain是修改背景大小到全部可見，手動輸入則是先管寬度後管長度 */
-    /* background-size: contain; */
     background-size: 100vw 100vh;
 
     height: 100vh;
@@ -524,7 +460,7 @@
 
 
 /* 全景 */
-iframe {
+#panomera {
     border: 1px solid #000;
 
 
