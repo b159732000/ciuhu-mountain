@@ -11,6 +11,20 @@
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet"> -->
 
     <style>
+        /* 載入頁 */
+        #childLoadingPage {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            z-index: 102;
+        }
+
+        .hidden {
+            visibility: hidden;
+            opacity: 0;
+            transition: all 0.5s ease;
+        }
+
         /* iframe導行列 */
         #mainNav {
             position: absolute;
@@ -28,8 +42,13 @@
 
 </head>
 
-<body>
+<body onload="pageIsLoad()"">
     <div class="container">
+
+        <!-- loading page -->
+        <iframe id="childLoadingPage" name="childLoadingPage" class="" src="./childLoadingPage.html"
+            frameborder="0"></iframe>
+
 
         <!-- 底部導行列 -->
         <iframe id="mainNav" src="./navigation.html" frameborder="0"></iframe>
@@ -43,7 +62,7 @@
             </ul>
         </nav> -->
 
-        <div class="content">
+        <div class="content hidden">
 
             <div class="header">
                 <img src="./images/zshx/TXT/w1-TXT.png" alt="">
@@ -164,6 +183,20 @@
     <script>
         document.getElementById("threeD").src = "./w1.html"
     </script>
+
+    <!-- 載入頁 -->
+    <script>
+        function pageIsLoad() {
+            document.childLoadingPage.childLoadingIsDone = true;
+        }
+        setInterval(function () {
+            if (document.childLoadingPage.childLoadingIsDone) {
+                document.getElementById("childLoadingPage").classList.add("hidden");
+                document.getElementsByClassName("content")[0].classList.remove("hidden");
+            }
+        }, 500);
+    </script>
+
 </body>
 
 </html>

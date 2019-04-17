@@ -11,8 +11,21 @@
     <link rel="stylesheet" href="./styles/jgzx.css">
 
     <style>
-            /* iframe導行列 */
-            #mainNav {
+        /* 載入頁 */
+        #childLoadingPage {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            z-index: 102;
+        }
+        .hidden {
+            visibility: hidden;
+            opacity: 0;
+            transition: all 0.5s ease;
+        }
+
+        /* iframe導行列 */
+        #mainNav {
             position: absolute;
             bottom: 0;
             width: 100%;
@@ -23,8 +36,13 @@
 
 </head>
 
-<body>
-    <div class="container">
+<body onload="pageIsLoad()">
+
+    <!-- loading page -->
+    <iframe id="childLoadingPage" name="childLoadingPage" class="" src="./childLoadingPage.html"
+        frameborder="0"></iframe>
+
+    <div class="container hidden">
 
         <div class="content">
 
@@ -48,18 +66,19 @@
 
         </div>
 
-    <!-- 底部導行列 -->
-    <iframe id="mainNav" src="./navigation.html" frameborder="0"></iframe>
+        <!-- 底部導行列 -->
+        <iframe id="mainNav" src="./navigation.html" frameborder="0"></iframe>
 
-        <!-- <nav class="mainNav">
-            <ul class="mainNavUl">
-                <li><a href="./xmjs.html"><img src="./images/xmjs.png" alt=""></a></li>
-                <li><a href="./qwzs.html"><img src="./images/qwzs.png" alt=""></a></li>
-                <li><a href="./jghx.html"><img src="./images/jghx.png" alt=""></a></li>
-                <li style="background: url(./images/bcActive.png); height: 100%;"><a href="./jgzx.html"><img
-                            src="./images/jgzs.png" alt=""></a></li>
-            </ul>
-        </nav> -->
+        <!-- 載入頁 -->
+        <script>
+            function pageIsLoad() {document.childLoadingPage.childLoadingIsDone = true;}
+            setInterval(function () {
+                if (document.childLoadingPage.childLoadingIsDone) {
+                    document.getElementById("childLoadingPage").classList.add("hidden");
+                    document.getElementsByClassName("container")[0].classList.remove("hidden");
+                }
+            }, 500);
+        </script>
 
     </div>
 </body>

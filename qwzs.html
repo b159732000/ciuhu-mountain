@@ -9,6 +9,20 @@
     <title>區位展示</title>
 
     <style>
+        /* 載入頁 */
+        #childLoadingPage {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            z-index: 102;
+        }
+
+        .hidden {
+            visibility: hidden;
+            opacity: 0;
+            transition: all 0.5s ease;
+        }
+
         /* iframe導行列 */
         #mainNav {
             position: absolute;
@@ -28,13 +42,17 @@
 
 <body>
 
-    <div class="container">
-        
+    <div class="container" onload="pageIsLoad()">
+
+        <!-- loading page -->
+        <iframe id="childLoadingPage" name="childLoadingPage" class="" src="./childLoadingPage.html"
+            frameborder="0"></iframe>
+
         <!-- 底部導行列 -->
         <iframe id="mainNav" src="./navigation.html" frameborder="0"></iframe>
-        
-        <div class="content">
-            
+
+        <div class="content hidden">
+
             <!-- 四大灣區 -->
             <div class="fourLakes">
                 <div class="location">
@@ -111,6 +129,19 @@
             <a onclick="closePanomera()"></a>
         </div>
         <iframe id="panomera" src="./qj/39/pano/index.html" frameborder="0" style="display: none;"></iframe>
+
+        <!-- 載入頁 -->
+        <script>
+            function pageIsLoad() {
+                document.childLoadingPage.childLoadingIsDone = true;
+            }
+            setInterval(function () {
+                if (document.childLoadingPage.childLoadingIsDone) {
+                    document.getElementById("childLoadingPage").classList.add("hidden");
+                    document.getElementsByClassName("content")[0].classList.remove("hidden");
+                }
+            }, 500);
+        </script>
 
     </div>
 

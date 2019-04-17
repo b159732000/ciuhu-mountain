@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Loading Page</title>
+
+    <style>
+        body {
+            box-sizing: border-box;
+            position: relative;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .container {
+            background-color: black;
+            overflow: hidden;
+            position: relative;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .loadingAnimationPosition {
+
+            height: 40vh;
+        }
+
+        .loadingAnimation {
+
+            height: 30vh;
+            position: relative;
+
+            display: flex;
+            /* 內容垂直置中 */
+            -webkit-align-items: center;
+            align-items: center;
+            /* 內容水平置中 */
+            -webkit-justify-content: center;
+            justify-content: center;
+        }
+
+        .loadingAnimationImg {
+            background-image: url(./images/childLoadingAnimation.gif);
+            background-size: 100% 100%;
+            height: 30vh;
+            width: 70vw;
+
+            display: flex;
+            /* 內容垂直置中 */
+            -webkit-align-items: center;
+            align-items: center;
+            /* 內容水平置中 */
+            -webkit-justify-content: center;
+            justify-content: center;
+        }
+
+        .loadingAnimation .loadingProgressText {
+            color: rgb(66, 66, 66);
+            font-size: 2em;
+            font-weight: 300;
+            font-family: momospace;
+        }
+
+        /* iframe導行列 */
+        #mainNav {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 9vh;
+            z-index: 2;
+        }
+    </style>
+    <script></script>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="loadingAnimationPosition">
+            <div class="loadingAnimation">
+                <div class="loadingAnimationImg">
+                    <div class="loadingProgressText"></div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- 底部導行列 -->
+        <iframe id="mainNav" src="./navigation.html" frameborder="0"></iframe>
+
+    </div>
+
+    <script>
+        var childLoadingIsDone = false;
+
+        function loader(_success) {
+            var loadingPercentage = document.getElementsByClassName("loadingProgressText")[0];
+
+            // 每隔20毫秒百分比加一
+            var w = 0,
+                t = setInterval(function () {
+                    w = w + 1;
+                    loadingPercentage.innerHTML = w + '%';
+                    if (childLoadingIsDone) {
+                        loadingPercentage.innerHTML = "100" + '%';
+                        clearInterval(t);
+                    }
+                    if (w === 100) {
+                        clearInterval(t);
+                        w = 0;
+                        childLoadingIsDone = true;
+                    }
+                }, 20);
+        }
+        loader();
+    </script>
+
+</body>
+
+</html>

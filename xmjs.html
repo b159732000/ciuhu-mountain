@@ -26,9 +26,26 @@
             padding: 0;
         }
 
+
+
+        /* 載入頁 */
+        #childLoadingPage {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            z-index: 102;
+        }
+
+        .hidden {
+            visibility: hidden;
+            opacity: 0;
+            transition: all 0.5s ease;
+        }
+
+
+
         /* iframe導行列 */
         #mainNav {
-            border: 1px solid #000;
             position: absolute;
             bottom: 0;
             width: 100%;
@@ -41,6 +58,7 @@
         .swiper-container {
             width: 100%;
             height: 100%;
+            transition: all 0.5s ease;
         }
 
         .swiper-slide {
@@ -65,9 +83,17 @@
     </style>
 </head>
 
-<body>
+<body onload="pageIsLoad()">
+
+    <!-- loading page -->
+    <iframe id="childLoadingPage" name="childLoadingPage" class="" src="./childLoadingPage.html"
+        frameborder="0"></iframe>
+
+    <!-- 底部導行列 -->
+    <iframe id="mainNav" src="./navigation.html" frameborder="0"></iframe>
+
     <!-- Swiper -->
-    <div class="swiper-container">
+    <div class="swiper-container hidden">
         <div class="swiper-wrapper">
             <div class="swiper-slide"></div>
             <div class="swiper-slide"></div>
@@ -106,9 +132,6 @@
         <div class="swiper-pagination"></div>
     </div>
 
-    <!-- 底部導行列 -->
-    <iframe id="mainNav" src="./navigation.html" frameborder="0"></iframe>
-
     <!-- <nav class="mainNav">
         <ul class="mainNavUl">
             <li id="navSelected" style="background: url(./images/bcActive.png);"><a href="./xmjs.html"><img
@@ -133,6 +156,19 @@
         });
     </script>
 
+
+    <!-- 載入頁 -->
+    <script>
+        function pageIsLoad() {
+            document.childLoadingPage.childLoadingIsDone = true;
+        }
+        setInterval(function () {
+            if (document.childLoadingPage.childLoadingIsDone) {
+                document.getElementById("childLoadingPage").classList.add("hidden");
+                document.getElementsByClassName("swiper-container")[0].classList.remove("hidden");
+            }
+        }, 500);
+    </script>
 
 </body>
 
