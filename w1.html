@@ -39,7 +39,6 @@
         .spinner {
             margin: 45vh auto 0;
             width: 45vw;
-            /* text-align: center; */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -226,7 +225,7 @@
     console.log(randomWidth);
 
     function defaultFull() {
-        const randomTiming = Math.floor((Math.random() * 2) + 4);
+        const randomTiming = Math.floor((Math.random() * 2) + 8);
         console.log(randomTiming);
         bar.style.transitionDuration = `${randomTiming}s`;
         bar.style.width = '80%';
@@ -242,6 +241,7 @@
         }, 100);
     }
     setTimeout(defaultFull, 100);
+
 </script>
 <!--<script type="text/javascript" src="http://tajs.qq.com/stats?sId=52797855" charset="UTF-8"></script>-->
 
