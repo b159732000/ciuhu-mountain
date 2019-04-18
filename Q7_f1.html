@@ -1,24 +1,30 @@
 <!doctype html>
 <html lang="zh">
+
 <head>
     <meta charset="UTF-8">
     <title>huxing</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <script src="js/jquery-1.8.2.min.js" type="text/javascript" charset="utf-8"></script>
     <style type="text/css">
-        ::-webkit-scrollbar {/*隐藏滚轮*/
+        ::-webkit-scrollbar {
+            /*隐藏滚轮*/
             display: none;
         }
-        *{
+
+        * {
             padding: 0;
             margin: 0;
             overflow: hidden;
         }
-        html,body{
+
+        html,
+        body {
             height: 100%;
             width: 100%;
             background: #fff;
         }
+
         .spinner {
             margin: 45vh auto 0;
             width: 45vw;
@@ -27,7 +33,7 @@
             align-items: center;
         }
 
-        .logo{
+        .logo {
             margin: 33vh auto 0;
             width: 45vw;
             height: 20vw;
@@ -35,6 +41,7 @@
             -webkit-background-size: 67% 67%;
             background-size: 67% 67%;
         }
+
         /* 進度條 */
         .progress {
             position: relative;
@@ -84,6 +91,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
     <!--<link rel="stylesheet" href="css/index.css">-->
 </head>
+
 <body>
 
     <div class="load">
@@ -97,118 +105,122 @@
         </div>
     </div>
 
-<canvas id="animation_canvas" width="100%" height="100%" style="background-color: #fff; display: none;"></canvas>
+    <canvas id="animation_canvas" width="100%" height="100%" style="background-color: #fff; display: none;"></canvas>
 </body>
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
 <script>
     //初始化参数
     const bar = document.getElementsByClassName('bar')[0];
     const progress = document.getElementsByClassName('progress')[0];
-    var images=[];
+    var images = [];
     var canvas = null;
     var ctx = null;
     var jindu = 0;
     //预加载序列图片
-    function loadImages(sources,callback){
+    function loadImages(sources, callback) {
         var loadedImages = 0;
         var numImages = 0;
 
-        var clearWidth=canvas.width;
-        var clearHeight=canvas.height;
+        var clearWidth = canvas.width;
+        var clearHeight = canvas.height;
 
         // get num of sources
-        numImages=sources.length;
-        console.log('分母：',numImages)
-        for (var i=0,len=sources.length;i<len;i++) {
+        numImages = sources.length;
+        console.log('分母：', numImages)
+        for (var i = 0, len = sources.length; i < len; i++) {
             images[i] = new Image();
             //当一张图片加载完成时执行
-            images[i].onload = function(){
+            images[i].onload = function () {
 
                 // 当所有图片加载完成时，执行回调函数callback
                 if (++loadedImages >= numImages) {
                     callback(images);
                     bar.style.transitionDuration = `0.5s`;
                     bar.style.width = '100%';
-                        setTimeout(function () {
-                            $('.load').hide();
-                            $('canvas').show();
-                        }, 1000);
+                    setTimeout(function () {
+                        $('.load').fadeOut(200);
+                        $('.load').hide();
+                        $('canvas').fadeIn(1000);
+                    }, 1000);
                 }
 
             };
             //把sources中的图片信息导入images数组
             images[i].src = sources[i];
-//            console.log(images);
+            //            console.log(images);
         }
     }
     //播放图片动画
-    function playImages(images){
-        var imageNum=images.length;
-        var imageNow=0;
+    function playImages(images) {
+        var imageNum = images.length;
+        var imageNow = 0;
 
     }
     //初始化
-    window.onload = function(){
+    window.onload = function () {
 
 
         var sources = [];
-        var a =0
+        var a = 0
         //构建图片序列数据
-        for(var i=0;i<67;i++){
-            a= 3*i;
-            if( a < 10){
-                sources[i] = 'https://showxxx571.oss-cn-beijing.aliyuncs.com/hvr/cuihu/img/FSZC01_f1/法式负一楼_0000' + a + '.jpg';//根据项目修改
-            }else if( a > 9 && a < 100){
-                sources[i] = 'https://showxxx571.oss-cn-beijing.aliyuncs.com/hvr/cuihu/img/FSZC01_f1/法式负一楼_000' + a + '.jpg';
-            }else{
-                sources[i] = 'https://showxxx571.oss-cn-beijing.aliyuncs.com/hvr/cuihu/img/FSZC01_f1/法式负一楼_00' + a + '.jpg';
+        for (var i = 0; i < 67; i++) {
+            a = 3 * i;
+            if (a < 10) {
+                sources[i] = 'https://showxxx571.oss-cn-beijing.aliyuncs.com/hvr/cuihu/img/FSZC01_f1/法式负一楼_0000' +
+                    a + '.jpg'; //根据项目修改
+            } else if (a > 9 && a < 100) {
+                sources[i] = 'https://showxxx571.oss-cn-beijing.aliyuncs.com/hvr/cuihu/img/FSZC01_f1/法式负一楼_000' +
+                    a + '.jpg';
+            } else {
+                sources[i] = 'https://showxxx571.oss-cn-beijing.aliyuncs.com/hvr/cuihu/img/FSZC01_f1/法式负一楼_00' + a +
+                    '.jpg';
             }
 
 
         }
         canvas = document.getElementById("animation_canvas");
-        canvas.width =  document.body.scrollWidth;
+        canvas.width = document.body.scrollWidth;
         canvas.height = document.body.scrollHeight;
 
         ctx = canvas.getContext("2d");
         //ctx.globalAlpha=0.5
         //执行图片预加载，加载完成后执行main
-        loadImages(sources,function(images){
-            ctx.fillStyle="rgba(0,0,0,0)";
-            ctx.clearRect(0,0, document.body.scrollWidth,document.body.scrollHeight);
-            ctx.fillRect(0, 0,  document.body.scrollWidth, document.body.scrollHeight);
-            ctx.drawImage(images[1], 0, 0, document.body.scrollWidth,document.body.scrollHeight);
+        loadImages(sources, function (images) {
+            ctx.fillStyle = "rgba(0,0,0,0)";
+            ctx.clearRect(0, 0, document.body.scrollWidth, document.body.scrollHeight);
+            ctx.fillRect(0, 0, document.body.scrollWidth, document.body.scrollHeight);
+            ctx.drawImage(images[1], 0, 0, document.body.scrollWidth, document.body.scrollHeight);
         });
         var starX = 0;
         var nowX = 0;
         var moveX = 0;
         var page = 0;
-        $('canvas').on('touchstart',function(e){
+        $('canvas').on('touchstart', function (e) {
             starX = e.originalEvent.targetTouches[0].pageX;
         });
-        $('canvas').on('touchmove',function(e){
+        $('canvas').on('touchmove', function (e) {
             nowX = e.originalEvent.targetTouches[0].pageX;
             moveX = nowX - starX;
             starX = nowX;
-            if( moveX < 0 ){
+            if (moveX < 0) {
                 page++;
-                if( page >= 66 ){
+                if (page >= 66) {
                     page = 0;
                 }
 
-            }else if( moveX > 0 ){
+            } else if (moveX > 0) {
                 page--;
-                if( page < 0 ){
+                if (page < 0) {
                     page = 66;
                 }
 
             }
-            ctx.fillStyle="rgba(0,0,0,0)";
-            ctx.clearRect(0,0, document.body.scrollWidth,document.body.scrollHeight);
-            ctx.fillRect(0, 0,  document.body.scrollWidth, document.body.scrollHeight);
-            ctx.drawImage(images[page], 0, 0, document.body.scrollWidth,document.body.scrollHeight);
+            ctx.fillStyle = "rgba(0,0,0,0)";
+            ctx.clearRect(0, 0, document.body.scrollWidth, document.body.scrollHeight);
+            ctx.fillRect(0, 0, document.body.scrollWidth, document.body.scrollHeight);
+            ctx.drawImage(images[page], 0, 0, document.body.scrollWidth, document.body.scrollHeight);
         });
-        $('canvas').on('touchend',function(){
+        $('canvas').on('touchend', function () {
             starX = 0;
             moveX = 0;
             nowX = 0;
@@ -216,7 +228,7 @@
 
     };
 
-        // 載入條
+    // 載入條
     //   const randomWidth = Math.floor((Math.random() * 65) + 10);
     const randomWidth = Math.floor((Math.random() * 10) + 10);
     bar.style.width = `${randomWidth}%`;
@@ -233,11 +245,12 @@
             document.getElementById('loadingPercentageText').innerHTML = Math.floor((document
                 .getElementsByClassName('bar shadow leaf')[0].offsetWidth / document
                 .getElementsByClassName('progress')[0].offsetWidth) * 100) + '%';
-                if(document.getElementById('loadingPercentageText').innerHTML == '100%') {
-                    clearInterval(renewLoadingPercentageText);
-                }
+            if (document.getElementById('loadingPercentageText').innerHTML == '100%') {
+                clearInterval(renewLoadingPercentageText);
+            }
         }, 100);
     }
     setTimeout(defaultFull, 100);
 </script>
+
 </html>

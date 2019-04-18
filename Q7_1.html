@@ -139,8 +139,9 @@
                     bar.style.transitionDuration = `0.5s`;
                     bar.style.width = '100%';
                     setTimeout(function () {
+                        $('.load').fadeOut(200);
                         $('.load').hide();
-                        $('canvas').show();
+                        $('canvas').fadeIn(1000);
                     }, 1000);
                 }
 
