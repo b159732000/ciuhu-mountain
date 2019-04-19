@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>景观展示</title>
+    <title>項目介紹</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
 
     <!-- Link Swiper's CSS -->
@@ -160,6 +160,7 @@
         function pageIsLoad() {
             document.childLoadingPage.childLoadingIsDone = true;
         }
+        setTimeout(pageIsLoad, 5000);
         setInterval(function () {
             if (document.childLoadingPage.childLoadingIsDone) {
                 document.getElementById("childLoadingPage").classList.add("hidden");
